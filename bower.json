@@ -1,0 +1,25 @@
+{
+  "name": "andrei-portfolio",
+  "description": "A portfolio for my projects",
+  "main": "index.html",
+  "authors": [
+    "Andrei Borissenko <Andrei.Borissenko@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "Skeleton-Sass": "skeleton-scss#*"
+  }
+}
