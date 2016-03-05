@@ -7,6 +7,7 @@
 * 12/9/2014
 * Sass Version by Seth Coelen https://github.com/whatsnewsaes
 */
+
 /* Base files. */
 @import "base/normalize";
 @import "base/variables";
@@ -14,6 +15,7 @@
 @import "base/base-styles";
 @import "base/utils";
 @import "base/typography";
+
 /* Modules */
 @import "modules/grid";
 @import "modules/buttons";
@@ -24,16 +26,31 @@
 @import "modules/spacing";
 @import "modules/media-queries";
 
+/*** Contents ***/
+
+/*
+    Header
+    Navigation
+ */
 
 /* Mobile first queries */
 
 $font-stack: "Lora", serif;
 
+/*** Header ***/
 body {
     overflow: hidden;
 }
-
-.title-line {
+.text {
+    font-family: $font-stack;
+}
+.title {
+    font-size: 7rem;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+.title__line {
     margin: 0;
     padding: 0;
     height: 1px;
@@ -41,60 +58,71 @@ body {
     border: 0;
     border-top: 1px solid #ccc;
 }
-
-.title {
-    font-family: $font-stack;
-    font-size: 7rem;
-    line-height: 1;
-    padding: 0;
-    margin: 0;
-}
-
-.title-firstname {
-
-}
-
-.title-lastname {
-
-}
-
 .subtitle {
     padding-left: 4rem;
 }
-
-.subtitle-bottom {
+.subtitle__bottom {
     padding-left: 4rem;
 }
-
-.separator-container {
-    padding: 15rem;
-    width: 100%;
-    height: 100%;
+.graphic {
     position: absolute;
     overflow: hidden;
+    height: 100%;
 }
-
-.separator-top {
-    background-color: yellow;
+.graphic--close-to-top {
+    padding-top: 34vw;
+}
+.graphic__top {
     height: 25rem;
-    transform: rotate(-15deg);
     border: 1px solid #000;
     position: relative;
     left: -500px;
     width: 3000px;
 }
+.graphic--yellow {
+    background-color: yellow;
+}
+.graphic--rotated15 {
+    transform: rotate(-15deg);
+}
+
+/*** Navigation ***/
+$navbar--border: 1px solid #888;
+
+.navbar {
+    border-top: $navbar--border;
+    border-bottom: $navbar--border;
+    padding: 1rem 0;
+}
+.navbar__item {
+    display: inline;
+}
+.navbar__item + .navbar__item {
+    margin-left: 2rem;
+}
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width:400px) {
+}
+
 /* Larger than phablet */
-@media (min-width: 550px) {}
+@media (min-width:550px) {
+    .graphic--close-to-top {
+        padding-top: 28vw;
+    }
+}
+
 /* Larger than tablet */
-@media (min-width: 750px) {
-    .title-lastname {
+@media (min-width:750px) {
+    .title__lastname {
         padding-left: 4rem;
     }
 }
+
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width:1000px) {
+}
+
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width:1200px) {
+}

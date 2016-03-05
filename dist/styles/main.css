@@ -798,12 +798,29 @@ form {
   margin-bottom: 2.5rem;
 }
 
+/*** Contents ***/
+/*
+    Header
+    Navigation
+ */
 /* Mobile first queries */
+/*** Header ***/
 body {
   overflow: hidden;
 }
 
-.title-line {
+.text {
+  font-family: "Lora", serif;
+}
+
+.title {
+  font-size: 7rem;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.title__line {
   margin: 0;
   padding: 0;
   height: 1px;
@@ -812,46 +829,66 @@ body {
   border-top: 1px solid #ccc;
 }
 
-.title {
-  font-family: "Lora", serif;
-  font-size: 7rem;
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-}
-
 .subtitle {
   padding-left: 4rem;
 }
 
-.subtitle-bottom {
+.subtitle__bottom {
   padding-left: 4rem;
 }
 
-.separator-container {
-  padding: 15rem;
-  width: 100%;
-  height: 100%;
+.graphic {
   position: absolute;
   overflow: hidden;
+  height: 100%;
 }
 
-.separator-top {
-  background-color: yellow;
+.graphic--close-to-top {
+  padding-top: 34vw;
+}
+
+.graphic__top {
   height: 25rem;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
   border: 1px solid #000;
   position: relative;
   left: -500px;
   width: 3000px;
 }
 
+.graphic--yellow {
+  background-color: yellow;
+}
+
+.graphic--rotated15 {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+/*** Navigation ***/
+.navbar {
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+  padding: 1rem 0;
+}
+
+.navbar__item {
+  display: inline;
+}
+
+.navbar__item + .navbar__item {
+  margin-left: 2rem;
+}
+
 /* Larger than mobile */
 /* Larger than phablet */
+@media (min-width: 550px) {
+  .graphic--close-to-top {
+    padding-top: 28vw;
+  }
+}
 /* Larger than tablet */
 @media (min-width: 750px) {
-  .title-lastname {
+  .title__lastname {
     padding-left: 4rem;
   }
 }
