@@ -1,5 +1,4 @@
 'use strict';
-
 // Load plugins
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
@@ -13,8 +12,10 @@ var gulp = require('gulp'),
     del = require('del'),
     htmlmin = require('gulp-htmlmin'),
     imageResize = require('gulp-image-resize'),
-    livereload = require('gulp-livereload');
-
+    livereload = require('gulp-livereload'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+    babel = require("gulp-babel");
 // Styles
 gulp.task('styles', function() {
     return sass('src/styles/*.scss', {
@@ -32,11 +33,10 @@ gulp.task('styles', function() {
             message: 'Styles task complete'
         }));
 });
-
 // Scripts
 gulp.task('scripts', function() {
-    return gulp.src(['src/scripts/**/*.js'
-        ])
+    return gulp.src(['src/scripts/**/*.js'])
+        .pipe(babel())
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
         .pipe(concat('main.js'))
@@ -50,37 +50,30 @@ gulp.task('scripts', function() {
             message: 'Scripts task complete'
         }));
 });
-
 // Clean images Don't do this unless you're sure you can build the images again
 // gulp.task('clean-images', function() {
 //     return del(['dist/images']);
 // });
-
 // Resize images
 gulp.task('images', function() {
-    gulp.src('src/images/*curtain.jpeg')
-        .pipe(imageResize({
-            width: 400
+    return gulp.src('src/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            use: [pngquant()]
         }))
-        .pipe(rename(function(path) { path.basename += '-400'; }))
-        .pipe(gulp.dest('dist/images'))
-        .pipe(notify({
-            message: 'Resize (no minification) task complete'
-        }));
+        .pipe(gulp.dest('dist/images'));
 });
-
 // Clean
 gulp.task('clean', function() {
     return del(['dist/styles', 'dist/scripts', './index.html']);
 });
-
-
 // Default
 gulp.task('default', ['clean'], function() {
     gulp.start('styles', 'scripts', 'images', 'minify-html');
 });
-
-
 // Minify HTML
 gulp.task('minify-html', function() {
     return gulp.src('src/*.html')
@@ -89,7 +82,6 @@ gulp.task('minify-html', function() {
         }))
         .pipe(gulp.dest('.'));
 });
-
 // Lint gulpfile.js
 gulp.task('gulpfile-lint', function() {
     return gulp.src('gulpfile.js')
@@ -99,22 +91,17 @@ gulp.task('gulpfile-lint', function() {
             message: 'Gulpfile-lint task complete'
         }));
 });
-
 // Watch
 gulp.task('watch', function() {
     livereload.listen();
     // Watch .scss files
     gulp.watch('src/styles/**/*.scss', ['styles']);
-
     // Watch .js files
     gulp.watch('src/scripts/**/*.js', ['scripts']);
-
     // Watch image files
     gulp.watch('src/images/**/*', ['images']);
-
     // Watch src/index.html
     gulp.watch('src/*.html', ['minify-html']);
-
     // Watch this file
     gulp.watch('gulpfile.js', ['gulpfile-lint']);
 });
