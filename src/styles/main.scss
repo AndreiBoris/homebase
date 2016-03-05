@@ -31,17 +31,20 @@
 /*
     Header
     Navigation
-
+    Footer
     Media Queries
  */
 
 /* Mobile first queries */
 
 $font-stack: "Lora", serif;
+$graphic--yellow: #ee0;
+$color--black: #000;
 
-body {
-    // overflow-x: hidden;
-}
+.columns.desktop--six {
+        width: 100%;
+        margin-left: 0;
+    }
 
 /*** Header ***/
 .container {
@@ -75,33 +78,41 @@ body {
 }
 .graphic {
     position: relative;
-    // z-index: 0;
-    // overflow-x: hidden;
-    // height: 100%;
 }
-.graphic--close-to-top {
+.graphic--has-spacing {
     padding-top: 8vw;
-    padding-bottom: 14vw;
+    padding-bottom: 18vw;
 }
-.graphic__top {
+.graphic--has-spacing--small {
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+}
+.graphic__thick-line {
     height: 25rem;
-    border: 1px solid #000;
+    border: 1px solid $color--black;
     position: relative;
-    left: -40%;
-    width: 200%;
+}
+.graphic__straight-lines {
+    height: 3rem;
+    position: relative;
+    border-top: 1rem solid $color--black;
+    border-bottom: 1.5rem solid $color--black;
 }
 .graphic--yellow {
-    background-color: yellow;
+    background-color: $graphic--yellow;
 }
 .graphic--rotated15 {
     transform: rotate(-15deg);
+    left: -40%;
+    width: 200%;
 }
 
 /*** Navigation ***/
 
-$navbar--border: 1px solid #888;
 
+$navbar--border: 1px solid #888;
 $navbar__item--hover: #c0f;
+$navbar__item--hover--shadow: #ddd;
 
 .navbar {
     border-top: $navbar--border;
@@ -116,16 +127,29 @@ $navbar__item--hover: #c0f;
 
     &:hover {
         color: $navbar__item--hover;
-        text-shadow: 0 -1em #DDD;
+        text-shadow: 0 -1em $navbar__item--hover--shadow;
     }
 }
-
 .navbar__item--absolute {
     position: absolute;
 }
-
 .navbar__item + .navbar__item {
     margin-left: 2rem;
+}
+
+/*** Projects ***/
+
+/*** Footer ***/
+
+$footer--background: #eee;
+$footer--border: 1px solid $color--black;
+
+.footer {
+    border-top: $footer--border;
+    border-left: $footer--border;
+    border-right: $footer--border;
+    background-color: $footer--background;
+    height: 10rem;
 }
 
 /*** Media Queries ***/
@@ -136,15 +160,22 @@ $navbar__item--hover: #c0f;
 
 /* Larger than phablet */
 @media (min-width:550px) {
-    // .graphic--close-to-top {
-    //     padding-top: 28vw;
-    // }
+    .graphic--has-spacing {
+        padding-bottom: 14vw;
+    }
+    .--vertically-centered {
+        display: flex;
+        align-items: center;
+    }
 }
 
 /* Larger than tablet */
 @media (min-width:750px) {
     .title__lastname {
         padding-left: 4rem;
+    }
+    .columns.desktop--six {
+        width: grid-column-width(6);
     }
 }
 

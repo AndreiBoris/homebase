@@ -15,7 +15,9 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    babel = require("gulp-babel");
+    babel = require('gulp-babel');
+
+
 // Styles
 gulp.task('styles', function() {
     return sass('src/styles/*.scss', {
