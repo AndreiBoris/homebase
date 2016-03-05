@@ -41,13 +41,12 @@
 $font-stack: "Lora", serif;
 $graphic--yellow: #ee0;
 $color--black: #000;
-
 $color--text--hover: #c0f;
 
 .columns.desktop--six {
-        width: 100%;
-        margin-left: 0;
-    }
+    width: 100%;
+    margin-left: 0;
+}
 
 /*** Header ***/
 .container {
@@ -81,7 +80,6 @@ $color--text--hover: #c0f;
 }
 
 /*** Graphics ***/
-
 .graphic {
     position: relative;
 }
@@ -143,11 +141,9 @@ $navbar__item--hover--shadow: #ddd;
 }
 
 /*** Projects ***/
-
 .project__image {
     transition: box-shadow .2s, transform .2s ease-in-out;
 }
-
 .project__list {
     padding: 2rem 0;
 }
@@ -163,34 +159,32 @@ $footer__link--hover: $color--text--hover;
     border-left: $footer--border;
     border-right: $footer--border;
     background-color: $footer--background;
+    margin-top: 2rem;
     height: 8em;
     position: relative;
 }
-
 .footer__row--bottom {
     bottom: 0;
     position: absolute;
     text-align: center;
     width: 100%;
 }
-
 .footer__row__list {
     list-style: none;
 }
-
 .--no-margin-or-padding {
     margin: 0;
     padding: 0;
 }
-
 .footer__row__list__label {
+    padding-left: 1rem;
     font-weight: bold;
 }
-
 .footer__row__list__link {
     color: black;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
         color: $footer__link--hover;
     }
 }
@@ -199,6 +193,7 @@ $footer__link--hover: $color--text--hover;
 
 /* Larger than mobile */
 @media (min-width:400px) {
+
 }
 
 /* Larger than phablet */
@@ -213,6 +208,9 @@ $footer__link--hover: $color--text--hover;
     .footer {
         height: 7em;
     }
+    .footer__row__list__label {
+        padding-left: 0.3rem;
+    }
 }
 
 /* Larger than tablet */
@@ -223,23 +221,27 @@ $footer__link--hover: $color--text--hover;
     .columns.desktop--six {
         width: grid-column-width(6);
     }
-
     .u-pull-left.project__image {
-    &:hover {
-        box-shadow: -1vw 1px 5px #888888;
-        transform: translate3d(2vw, 0, 0);
+        &:hover {
+            box-shadow: -1vw 1px 5px #888888;
+            transform: translate3d(2vw, 0, 0);
+        }
     }
-    .footer {
-        height: 4em;
-    }
-}
 
-.u-pull-right.project__image {
-    &:hover {
-        box-shadow: 1vw 1px 5px #888888;
-        transform: translate3d(-2vw, 0, 0);
+
+    .footer {
+        height: 5em;
     }
-}
+
+    .footer__row__list__label {
+        padding-left: 1rem;
+    }
+    .u-pull-right.project__image {
+        &:hover {
+            box-shadow: 1vw 1px 5px #888888;
+            transform: translate3d(-2vw, 0, 0);
+        }
+    }
 }
 
 /* Larger than desktop */
