@@ -38,23 +38,18 @@
           </h3>
         </div>
       </header>
-      <nav id="row">
-        <ul class="text navbar">
-          <li class="navbar__item">
-            Stuff created
-          </li>
-          <li class="navbar__item">
-            Talk to me
-          </li>
-          <li class="navbar__item">
-            Who this is
-          </li>
-        </ul>
+      <nav class="row">
+        <ul id="navigation" class="text navbar"></ul>
       </nav>
       <footer>
       </footer>
     </div>
+    <script id="template__navbar__item" type="text/template" class="template">
+            <%= title %>
+    </script>
     <script type="text/javascript" src="dist/perm/jquery.min.js"></script>
-    <script type="text/javascript" src="dist/scripts/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
+    <script src="dist/scripts/main.js"></script>
   </body>
 </html>

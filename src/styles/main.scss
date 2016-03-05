@@ -87,16 +87,37 @@ body {
 }
 
 /*** Navigation ***/
+
 $navbar--border: 1px solid #888;
 
 .navbar {
     border-top: $navbar--border;
     border-bottom: $navbar--border;
     padding: 1rem 0;
+    position: relative;
+    height: 3rem;
+
+    /*** FLEX STYLES ***/
+    // display: flex;
+    // flex-wrap: nowrap;
+    // justify-content: flex-start;
 }
 .navbar__item {
     display: inline;
+    cursor: pointer;
+
+    /*** FLEX STYLES ***/
+    // flex-grow: 1;
+
+    &:hover {
+        font-weight: bold;
+    }
 }
+
+.navbar__item--absolute {
+    position: absolute;
+}
+
 .navbar__item + .navbar__item {
     margin-left: 2rem;
 }

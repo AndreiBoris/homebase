@@ -869,10 +869,22 @@ body {
   border-top: 1px solid #888;
   border-bottom: 1px solid #888;
   padding: 1rem 0;
+  position: relative;
+  height: 3rem;
+  /*** FLEX STYLES ***/
 }
 
 .navbar__item {
   display: inline;
+  cursor: pointer;
+  /*** FLEX STYLES ***/
+}
+.navbar__item:hover {
+  font-weight: bold;
+}
+
+.navbar__item--absolute {
+  position: absolute;
 }
 
 .navbar__item + .navbar__item {
