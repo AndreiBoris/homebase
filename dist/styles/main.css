@@ -870,17 +870,16 @@ body {
   border-bottom: 1px solid #888;
   padding: 1rem 0;
   position: relative;
-  height: 3rem;
-  /*** FLEX STYLES ***/
+  height: 4.5rem;
 }
 
 .navbar__item {
   display: inline;
   cursor: pointer;
-  /*** FLEX STYLES ***/
 }
 .navbar__item:hover {
-  font-weight: bold;
+  color: #c0f;
+  text-shadow: 0 -1em #DDD;
 }
 
 .navbar__item--absolute {

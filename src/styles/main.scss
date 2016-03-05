@@ -90,27 +90,22 @@ body {
 
 $navbar--border: 1px solid #888;
 
+$navbar__item--hover: #c0f;
+
 .navbar {
     border-top: $navbar--border;
     border-bottom: $navbar--border;
     padding: 1rem 0;
     position: relative;
-    height: 3rem;
-
-    /*** FLEX STYLES ***/
-    // display: flex;
-    // flex-wrap: nowrap;
-    // justify-content: flex-start;
+    height: 4.5rem;
 }
 .navbar__item {
     display: inline;
     cursor: pointer;
 
-    /*** FLEX STYLES ***/
-    // flex-grow: 1;
-
     &:hover {
-        font-weight: bold;
+        color: $navbar__item--hover;
+        text-shadow: 0 -1em #DDD;
     }
 }
 
