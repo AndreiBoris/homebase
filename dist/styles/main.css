@@ -930,6 +930,14 @@ form {
   border-right: 1px solid #000;
   background-color: #eee;
   height: 10rem;
+  position: relative;
+}
+
+.footer__row--bottom {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
 /*** Media Queries ***/

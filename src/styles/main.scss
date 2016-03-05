@@ -161,6 +161,14 @@ $footer--border: 1px solid $color--black;
     border-right: $footer--border;
     background-color: $footer--background;
     height: 10rem;
+    position: relative;
+}
+
+.footer__row--bottom {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 
 /*** Media Queries ***/
