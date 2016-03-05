@@ -821,6 +821,14 @@ form {
   border: 1px solid #aaa;
 }
 
+.--link {
+  color: #555;
+  text-decoration: none;
+}
+.--link:hover {
+  color: #c0f;
+}
+
 /*** Header ***/
 .container {
   z-index: 1;
@@ -870,10 +878,6 @@ form {
 .graphic--has-spacing--medium {
   padding-top: 3rem;
   padding-bottom: 2rem;
-}
-
-.graphic--has-spacing--small {
-  padding-bottom: 6vw;
 }
 
 .graphic__thick-line {
@@ -991,14 +995,6 @@ form {
   font-weight: bold;
 }
 
-.footer__row__list__link {
-  color: black;
-  text-decoration: none;
-}
-.footer__row__list__link:hover {
-  color: #c0f;
-}
-
 /*** Media Queries ***/
 /* Larger than mobile */
 /* Larger than phablet */
@@ -1044,24 +1040,12 @@ form {
             transform: translate3d(0, -2vw, 0);
   }
 
-  .u-pull-left.project__image:hover {
-    box-shadow: -1vw 1px 5px #888888;
-    -webkit-transform: translate3d(2vw, 0, 0);
-            transform: translate3d(2vw, 0, 0);
-  }
-
   .footer {
     height: 5em;
   }
 
   .footer__row__list__label {
     padding-left: 1rem;
-  }
-
-  .u-pull-right.project__image:hover {
-    box-shadow: 1vw 1px 5px #888888;
-    -webkit-transform: translate3d(-2vw, 0, 0);
-            transform: translate3d(-2vw, 0, 0);
   }
 
   .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
@@ -1072,6 +1056,14 @@ form {
 @media (min-width: 1000px) {
   .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
     margin-left: 6.5rem;
+  }
+
+  .project__list {
+    font-size: 2rem;
+  }
+
+  .about-me {
+    font-size: 2rem;
   }
 }
 /* Larger than Desktop HD */
