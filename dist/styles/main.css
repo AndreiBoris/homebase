@@ -912,6 +912,24 @@ form {
 }
 
 /*** Projects ***/
+.project-image {
+  transition: box-shadow .2s, -webkit-transform .2s ease-in-out;
+  transition: box-shadow .2s, transform .2s ease-in-out;
+  transition: box-shadow .2s, transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+.u-pull-left.project-image:hover {
+  box-shadow: -1rem 1px 5px #888888;
+  -webkit-transform: translate3d(2rem, 0, 0);
+          transform: translate3d(2rem, 0, 0);
+}
+
+.u-pull-right.project-image:hover {
+  box-shadow: 1rem 1px 5px #888888;
+  -webkit-transform: translate3d(-2rem, 0, 0);
+          transform: translate3d(-2rem, 0, 0);
+}
+
 /*** Footer ***/
 .footer {
   border-top: 1px solid #000;
