@@ -30,6 +30,7 @@
 
 /*
     Header
+    Graphics
     Navigation
     Footer
     Media Queries
@@ -76,6 +77,9 @@ $color--black: #000;
 .subtitle__bottom {
     padding-left: 4rem;
 }
+
+/*** Graphics ***/
+
 .graphic {
     position: relative;
 }
@@ -84,7 +88,6 @@ $color--black: #000;
     padding-bottom: 18vw;
 }
 .graphic--has-spacing--small {
-    padding-top: 6vw;
     padding-bottom: 6vw;
 }
 .graphic__thick-line {
@@ -139,22 +142,12 @@ $navbar__item--hover--shadow: #ddd;
 
 /*** Projects ***/
 
-.project-image {
+.project__image {
     transition: box-shadow .2s, transform .2s ease-in-out;
 }
 
-.u-pull-left.project-image {
-    &:hover {
-        box-shadow: -1rem 1px 5px #888888;
-        transform: translate3d(2rem, 0, 0);
-    }
-}
-
-.u-pull-right.project-image {
-    &:hover {
-        box-shadow: 1rem 1px 5px #888888;
-        transform: translate3d(-2rem, 0, 0);
-    }
+.project__list {
+    padding: 2rem 0;
 }
 
 /*** Footer ***/
@@ -195,6 +188,20 @@ $footer--border: 1px solid $color--black;
     .columns.desktop--six {
         width: grid-column-width(6);
     }
+
+    .u-pull-left.project__image {
+    &:hover {
+        box-shadow: -1vw 1px 5px #888888;
+        transform: translate3d(2vw, 0, 0);
+    }
+}
+
+.u-pull-right.project__image {
+    &:hover {
+        box-shadow: 1vw 1px 5px #888888;
+        transform: translate3d(-2vw, 0, 0);
+    }
+}
 }
 
 /* Larger than desktop */
