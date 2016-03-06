@@ -821,11 +821,12 @@ form {
   border: 1px solid #aaa;
 }
 
-.--link {
-  color: #555;
+.--link, .navbar__projects__dropdown__link {
+  color: #666;
   text-decoration: none;
+  cursor: pointer;
 }
-.--link:hover {
+.--link:hover, .navbar__projects__dropdown__link:hover {
   color: #c0f;
 }
 
@@ -865,9 +866,54 @@ form {
   padding-left: 4rem;
 }
 
+/*** Navigation ***/
+.navbar {
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+  padding: 1rem 0;
+  position: relative;
+  height: 2.8rem;
+}
+
+.navbar__item {
+  display: inline;
+  position: relative;
+}
+
+.navbar__item + .navbar__item {
+  margin-left: 2rem;
+}
+
+.navbar__item__dropdown.--show {
+  display: block;
+}
+
+.navbar__projects__dropdown {
+  display: none;
+  position: absolute;
+  margin: 1.4rem 0 0 0;
+  min-width: 13em;
+  border: 1px solid #aaa;
+}
+
+.navbar__projects__dropdown.--show {
+  display: block;
+  z-index: 1;
+}
+
+.navbar__projects__dropdown__link {
+  position: relative;
+}
+
+.navbar__projects__dropdown__link__title {
+  font-size: 1.6rem;
+  margin: 0.5rem 0 1rem 1rem;
+}
+
 /*** Graphics ***/
 .graphic {
   position: relative;
+  z-index: 0;
 }
 
 .graphic--has-spacing {
@@ -923,32 +969,6 @@ form {
 }
 
 .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
-  margin-left: 2rem;
-}
-
-/*** Navigation ***/
-.navbar {
-  border-top: 1px solid #888;
-  border-bottom: 1px solid #888;
-  padding: 1rem 0;
-  position: relative;
-  height: 2.8rem;
-}
-
-.navbar__item {
-  display: inline;
-  cursor: pointer;
-}
-.navbar__item:hover {
-  color: #c0f;
-  text-shadow: 0 -1em #ddd;
-}
-
-.navbar__item--absolute {
-  position: absolute;
-}
-
-.navbar__item + .navbar__item {
   margin-left: 2rem;
 }
 
@@ -1035,9 +1055,9 @@ form {
   }
 
   .project__image:hover {
-    box-shadow: 1px 1vw 5px #888888;
-    -webkit-transform: translate3d(0, -2vw, 0);
-            transform: translate3d(0, -2vw, 0);
+    box-shadow: 1px 0.25vw 5px #888888;
+    -webkit-transform: translate3d(0, -0.5vw, 0);
+            transform: translate3d(0, -0.5vw, 0);
   }
 
   .footer {
