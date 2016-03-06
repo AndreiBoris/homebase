@@ -16,4 +16,11 @@ $(function(){
         $navProjectsDrop.removeClass('--show');
     });
 
+    var $body = $('body');
+
+    $body.on('scroll', function(){
+        console.log('nothing');
+        console.log($body.scrollTop());
+    });
+
 });

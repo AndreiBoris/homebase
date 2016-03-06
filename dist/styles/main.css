@@ -898,7 +898,7 @@ form {
 
 .navbar__projects__dropdown.--show {
   display: block;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar__projects__dropdown__link {
@@ -908,6 +908,28 @@ form {
 .navbar__projects__dropdown__link__title {
   font-size: 1.6rem;
   margin: 0.5rem 0 1rem 1rem;
+}
+
+.back-to-top {
+  display: none;
+  right: 15%;
+  bottom: 5%;
+  padding: 1rem 2.5rem;
+  border: 1px solid #aaa;
+  border-radius: 35%;
+  font-size: 3rem;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  background: #DDD;
+}
+.back-to-top:hover {
+  background: #aaa;
+}
+
+.back-to-top.--show {
+  display: block;
+  z-index: 2;
 }
 
 /*** Graphics ***/
