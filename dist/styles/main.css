@@ -765,37 +765,29 @@ li {
 /* Larger than desktop */
 /* Larger than Desktop HD */
 /*** Graphics ***/
+/*** Graphics used to separate content shouldn't steal clicks from other elements ***/
 .graphic {
   position: relative;
   z-index: 0;
 }
 
+/*** Spacing for the big graphic at the top ***/
 .graphic--has-spacing {
   padding-top: 8vw;
   padding-bottom: 18vw;
 }
 
+/*** Spacing for smaller straight-line graphics ***/
 .graphic--has-spacing--medium {
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
+/*** Styles for large graphic seen during page load ***/
 .graphic__thick-line {
   height: 25rem;
   border: 1px solid #000;
   position: relative;
-}
-
-.graphic__straight-lines {
-  height: 3rem;
-  position: relative;
-  border-top: 1rem solid #000;
-  border-bottom: 1.5rem solid #000;
-}
-
-.graphic__straight-lines--yellow {
-  border-top: 1rem solid #ee0;
-  border-bottom: 1.5rem solid #ee0;
 }
 
 .graphic--yellow {
@@ -809,38 +801,20 @@ li {
   width: 200%;
 }
 
-.graphic__many-diagonals {
-  height: 20rem;
+/*** Lines separating content mixin ***/
+/*** Black (standard) and yellow versions ***/
+.graphic__straight-lines {
+  height: 3rem;
   position: relative;
-  overflow: hidden;
+  border-top: 1rem solid #000;
+  border-bottom: 1.5rem solid #000;
 }
 
-.graphic__many-diagonals__diagonal {
-  display: inline-block;
-  height: 20rem;
-  box-sizing: border-box;
-  background-color: #ee0;
-  border: 1px solid #000;
-  width: 2rem;
+.graphic__straight-lines--yellow {
+  height: 3rem;
   position: relative;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-}
-
-.graphic__many-diagonals__diagonal--2 {
-  display: inline-block;
-  height: 20rem;
-  box-sizing: border-box;
-  background-color: #ee0;
-  border: 1px solid #000;
-  width: 2rem;
-  position: relative;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-}
-
-.graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
-  margin-left: 2rem;
+  border-top: 1rem solid #ee0;
+  border-bottom: 1.5rem solid #ee0;
 }
 
 /*** Media Queries ***/
@@ -850,23 +824,9 @@ li {
   .graphic--has-spacing {
     padding-bottom: 14vw;
   }
-
-  .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
-    margin-left: 4rem;
-  }
 }
 /* Larger than tablet */
-@media (min-width: 750px) {
-  .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
-    margin-left: 5rem;
-  }
-}
 /* Larger than desktop */
-@media (min-width: 1000px) {
-  .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
-    margin-left: 6.5rem;
-  }
-}
 /* Larger than Desktop HD */
 /*** Projects ***/
 .project__image {
@@ -897,19 +857,13 @@ li {
   }
 }
 /* Larger than Desktop HD */
-/*** About Me ***/
-/*** Blog ***/
-/*** Media Queries ***/
-/* Larger than mobile */
-/* Larger than phablet */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
 /*** Footer ***/
+/*** Provide spacing between Title and footer content ***/
 .footer {
   margin-top: 2rem;
 }
 
+/*** Center motto at the bottom of the page ***/
 .footer__row--bottom {
   text-align: center;
   width: 80%;
@@ -917,10 +871,7 @@ li {
   margin-right: auto;
 }
 
-.footer__row__list {
-  list-style: none;
-}
-
+/*** Each contact information piece title ***/
 .footer__row__list__label {
   padding-left: 1rem;
   font-weight: bold;
@@ -928,16 +879,6 @@ li {
 
 /* Larger than mobile */
 /* Larger than phablet */
-@media (min-width: 550px) {
-  .footer__row__list__label {
-    padding-left: 0.3rem;
-  }
-}
 /* Larger than tablet */
-@media (min-width: 750px) {
-  .footer__row__list__label {
-    padding-left: 1rem;
-  }
-}
 /* Larger than desktop */
 /* Larger than Desktop HD */

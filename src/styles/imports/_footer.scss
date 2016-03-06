@@ -1,15 +1,19 @@
+/*** Provide spacing between Title and footer content ***/
+
 .footer {
     margin-top: 2rem;
 }
+
+/*** Center motto at the bottom of the page ***/
+
 .footer__row--bottom {
     text-align: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
-.footer__row__list {
-    list-style: none;
-}
+
+/*** Each contact information piece title ***/
 
 .footer__row__list__label {
     padding-left: 1rem;
@@ -22,16 +26,10 @@
 
 /* Larger than phablet */
 @media (min-width:550px) {
-    .footer__row__list__label {
-        padding-left: 0.3rem;
-    }
 }
 
 /* Larger than tablet */
 @media (min-width:750px) {
-    .footer__row__list__label {
-        padding-left: 1rem;
-    }
 }
 
 /* Larger than desktop */

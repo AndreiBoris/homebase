@@ -1,70 +1,64 @@
+/*** Graphics used to separate content shouldn't steal clicks from other elements ***/
+
 .graphic {
     position: relative;
     z-index: 0;
 }
+
+/*** Spacing for the big graphic at the top ***/
+
 .graphic--has-spacing {
     padding-top: 8vw;
     padding-bottom: 18vw;
 }
+
+/*** Spacing for smaller straight-line graphics ***/
+
 .graphic--has-spacing--medium {
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
+
+/*** Styles for large graphic seen during page load ***/
+
 .graphic__thick-line {
     height: 25rem;
     border: 1px solid $color--black;
     position: relative;
 }
-.graphic__straight-lines {
-    height: 3rem;
-    position: relative;
-    border-top: 1rem solid $color--black;
-    border-bottom: 1.5rem solid $color--black;
+
+.graphic--yellow {
+    background-color: $color--yellow;
 }
 
-.graphic__straight-lines--yellow {
-    border-top: 1rem solid $graphic--yellow;
-    border-bottom: 1.5rem solid $graphic--yellow;
-}
-.graphic--yellow {
-    background-color: $graphic--yellow;
-}
 .graphic--rotated15 {
     transform: rotate(-15deg);
     left: -40%;
     width: 200%;
 }
-.graphic__many-diagonals {
-    height: 20rem;
-    // background-color: gray;
+
+
+
+
+
+
+/*** Lines separating content mixin ***/
+
+@mixin graphic__straight-lines($color) {
+    height: 3rem;
     position: relative;
-    overflow: hidden;
+    border-top: 1rem solid $color;
+    border-bottom: 1.5rem solid $color;
 }
 
-.graphic__many-diagonals__diagonal {
-    display: inline-block;
-    height: 20rem;
-    box-sizing: border-box;
-    background-color: $graphic--yellow;
-    border: 1px solid $color--black;
-    width: 2rem;
-    position: relative;
-    transform: rotate(-10deg);
+/*** Black (standard) and yellow versions ***/
+
+.graphic__straight-lines {
+    @include graphic__straight-lines($color--black);
 }
 
-.graphic__many-diagonals__diagonal--2 {
-    display: inline-block;
-    height: 20rem;
-    box-sizing: border-box;
-    background-color: $graphic--yellow;
-    border: 1px solid $color--black;
-    width: 2rem;
-    position: relative;
-    transform: rotate(30deg);
-}
-
-.graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
-    margin-left: 2rem;
+.graphic__straight-lines--yellow {
+    @include graphic__straight-lines($color--yellow);
 }
 
 /*** Media Queries ***/
@@ -78,23 +72,14 @@
     .graphic--has-spacing {
         padding-bottom: 14vw;
     }
-    .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
-        margin-left: 4rem;
-    }
 }
 
 /* Larger than tablet */
 @media (min-width:750px) {
-    .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
-        margin-left: 5rem;
-    }
 }
 
 /* Larger than desktop */
 @media (min-width:1000px) {
-    .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
-        margin-left: 6.5rem;
-    }
 }
 
 /* Larger than Desktop HD */
