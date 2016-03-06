@@ -152,7 +152,7 @@ $navbar__item--hover--shadow: #ddd;
 
 .back-to-top {
     display: none;
-    right: 15%;
+    right: 8%;
     bottom: 5%;
     padding: 1rem 2.5rem;
     border: 1px solid $color--gray;
@@ -318,6 +318,10 @@ $footer__link--hover: $color--link--hover;
 
     .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
         margin-left: 5rem;
+    }
+
+    .back-to-top {
+        right: 15%;
     }
 }
 

@@ -17,10 +17,26 @@ $(function(){
     });
 
     var $body = $('body');
-
-    $body.on('scroll', function(){
-        console.log('nothing');
-        console.log($body.scrollTop());
+    var performPositionRead = false;
+    $(document).on('scroll', function(){
+        performPositionRead = true;
     });
+
+    var $navBar = $('#navigation');
+    var NAV_HEIGHT = $navBar.height();
+    var $backToTop = $('#back-to-top');
+
+    setInterval(function(){
+        if (performPositionRead){
+            performPositionRead = false;
+            if ($navBar.position().top + NAV_HEIGHT < $body.scrollTop()) {
+                $backToTop.addClass('--show');
+            } else {
+                $backToTop.removeClass('--show');
+            }
+        }
+    }, 250);
+
+
 
 });
