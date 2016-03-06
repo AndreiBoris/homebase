@@ -1,25 +1,16 @@
 .footer {
-    border-top: $footer--border;
-    border-left: $footer--border;
-    border-right: $footer--border;
-    background-color: $footer--background;
     margin-top: 2rem;
-    height: 8em;
-    position: relative;
 }
 .footer__row--bottom {
-    bottom: 0;
-    position: absolute;
     text-align: center;
-    width: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .footer__row__list {
     list-style: none;
 }
-.--no-margin-or-padding {
-    margin: 0;
-    padding: 0;
-}
+
 .footer__row__list__label {
     padding-left: 1rem;
     font-weight: bold;
@@ -31,9 +22,6 @@
 
 /* Larger than phablet */
 @media (min-width:550px) {
-    .footer {
-        height: 7em;
-    }
     .footer__row__list__label {
         padding-left: 0.3rem;
     }
@@ -41,9 +29,6 @@
 
 /* Larger than tablet */
 @media (min-width:750px) {
-    .footer {
-        height: 5em;
-    }
     .footer__row__list__label {
         padding-left: 1rem;
     }

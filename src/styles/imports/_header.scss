@@ -8,7 +8,7 @@
     font-family: $font-stack;
 }
 .title {
-    font-size: 7rem;
+    font-size: 6rem;
     line-height: 1;
     padding: 0;
     margin: 0;
@@ -32,6 +32,9 @@
 
 /* Larger than mobile */
 @media (min-width:400px) {
+    .title {
+        font-size: 7rem;
+    }
 }
 
 /* Larger than phablet */
