@@ -579,6 +579,14 @@ li {
     Footer
 */
 /*** Variables ***/
+/*** Font for the whole page ***/
+/*** Yellow colour for graphics ***/
+/*** Black used in many places ***/
+/*** Used in back to top button ***/
+/*** Used for basic borders and back to top button ***/
+/*** Used to style links ***/
+/*** Used for links on hover ***/
+/*** Top and bottom border for the navbar ***/
 /*** General ***/
 .--has-spacing--top {
   margin-top: 2rem;
