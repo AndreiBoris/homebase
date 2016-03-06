@@ -22,10 +22,21 @@
     padding: 0;
 }
 
+.--no-list-style {
+    list-style: none;
+}
+
 /* Larger than phablet */
 @media (min-width:550px) {
     .--vertically-centered {
         display: flex;
         align-items: center;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width:1000px) {
+    .--bump-text-size {
+        font-size: 2rem;
     }
 }

@@ -606,6 +606,10 @@ li {
   padding: 0;
 }
 
+.--no-list-style {
+  list-style: none;
+}
+
 /* Larger than phablet */
 @media (min-width: 550px) {
   .--vertically-centered {
@@ -615,6 +619,12 @@ li {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .--bump-text-size {
+    font-size: 2rem;
   }
 }
 /*** Header ***/
@@ -863,12 +873,13 @@ li {
 }
 /* Larger than Desktop HD */
 /*** About Me ***/
+/*** Blog ***/
+/*** Media Queries ***/
+/* Larger than mobile */
+/* Larger than phablet */
+/* Larger than tablet */
 /* Larger than desktop */
-@media (min-width: 1000px) {
-  .about-me {
-    font-size: 2rem;
-  }
-}
+/* Larger than Desktop HD */
 /*** Footer ***/
 .footer {
   margin-top: 2rem;
