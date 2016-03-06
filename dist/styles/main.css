@@ -588,14 +588,17 @@ li {
 /*** Used for links on hover ***/
 /*** Top and bottom border for the navbar ***/
 /*** General ***/
+/*** Adds space above an element when necessary ***/
 .--has-spacing--top {
   margin-top: 2rem;
 }
 
+/*** Removes space below an element when necessary ***/
 .--no-spacing--bottom {
   margin-bottom: 0rem;
 }
 
+/*** Simple border to use whenever ***/
 .--simple-border {
   border: 1px solid #aaa;
 }
@@ -610,36 +613,32 @@ li {
   color: #c0f;
 }
 
+/*** Remove list styling when needed ***/
 .--no-list-style {
   list-style: none;
 }
 
-.--disappear-when-narrow {
-  display: none;
-}
-
-/*** ***/
+/*** All text should get these fonts ***/
 .--text {
   font-family: "Lora", serif;
 }
 
+/*** Remove this element on narrow screens (see media query below) ***/
+.--disappear-when-narrow {
+  display: none;
+}
+
 /* Larger than phablet */
 @media (min-width: 550px) {
-  .--vertically-centered {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
+  /*** Screen is wide enough to display these elements ***/
   .--disappear-when-narrow {
     display: block;
   }
 }
 /* Larger than desktop */
 @media (min-width: 1000px) {
+  /*** Apply to some text so that it fills space and looks better on big
+  screens ***/
   .--bump-text-size {
     font-size: 2rem;
   }
