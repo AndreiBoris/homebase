@@ -569,7 +569,6 @@ li {
 
 /*** Contents ***/
 /*
-    Variables
     General
     Header
     Graphics
@@ -577,7 +576,7 @@ li {
     Footer
     Media Queries
 */
-/*** Variables ***/
+/* Mobile first queries */
 /*** General ***/
 .--has-spacing--top {
   margin-top: 2rem;
