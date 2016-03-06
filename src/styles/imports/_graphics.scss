@@ -21,6 +21,11 @@
     border-top: 1rem solid $color--black;
     border-bottom: 1.5rem solid $color--black;
 }
+
+.graphic__straight-lines--yellow {
+    border-top: 1rem solid $graphic--yellow;
+    border-bottom: 1.5rem solid $graphic--yellow;
+}
 .graphic--yellow {
     background-color: $graphic--yellow;
 }
@@ -35,6 +40,7 @@
     position: relative;
     overflow: hidden;
 }
+
 .graphic__many-diagonals__diagonal {
     display: inline-block;
     height: 20rem;
@@ -45,6 +51,18 @@
     position: relative;
     transform: rotate(-10deg);
 }
+
+.graphic__many-diagonals__diagonal--2 {
+    display: inline-block;
+    height: 20rem;
+    box-sizing: border-box;
+    background-color: $graphic--yellow;
+    border: 1px solid $color--black;
+    width: 2rem;
+    position: relative;
+    transform: rotate(30deg);
+}
+
 .graphic__many-diagonals__diagonal + .graphic__many-diagonals__diagonal {
     margin-left: 2rem;
 }

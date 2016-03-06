@@ -16,14 +16,15 @@
         color: $color--link--hover;
     }
 }
-
 .--no-margin-or-padding {
     margin: 0;
     padding: 0;
 }
-
 .--no-list-style {
     list-style: none;
+}
+.--disappear-when-narrow {
+    display: none;
 }
 
 /* Larger than phablet */
@@ -31,6 +32,9 @@
     .--vertically-centered {
         display: flex;
         align-items: center;
+    }
+    .--disappear-when-narrow {
+        display: block;
     }
 }
 
