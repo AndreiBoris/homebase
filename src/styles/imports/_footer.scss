@@ -20,6 +20,13 @@
     font-weight: bold;
 }
 
+/*** Makes it easier to click on the links on mobile ***/
+
+.footer__row__list__link {
+    font-size: 1.2em;
+    padding: 1em 0;
+}
+
 /* Larger than mobile */
 @media (min-width:400px) {
 }

@@ -1,18 +1,24 @@
+/*** This modification to .container (from Skeleton framework) gets the big
+yellow graphic from overflowing the screen. It prevents horizontal scroll. ***/
+
 .container {
     z-index: 1;
     position: relative;
     overflow: hidden;
     height: 100%;
 }
-.text {
-    font-family: $font-stack;
-}
+
+/*** Styling for both first and last name ***/
+
 .title {
     font-size: 6rem;
     line-height: 1;
     padding: 0;
     margin: 0;
 }
+
+/*** Line between the first and last name ***/
+
 .title__line {
     margin: 0;
     padding: 0;
@@ -21,9 +27,15 @@
     border: 0;
     border-top: 1px solid #ccc;
 }
+
+/*** The title underneath my name ***/
+
 .subtitle {
     padding-left: 4rem;
 }
+
+/*** Indent the second line on the title slightly ***/
+
 .subtitle__bottom {
     padding-left: 4rem;
 }
@@ -32,6 +44,7 @@
 
 /* Larger than mobile */
 @media (min-width:400px) {
+    /*** Title can be bigger on screens that aren't tiny ***/
     .title {
         font-size: 7rem;
     }
@@ -43,6 +56,7 @@
 
 /* Larger than tablet */
 @media (min-width:750px) {
+    /*** On larger screen we can indent the last name ***/
     .title__lastname {
         padding-left: 4rem;
     }

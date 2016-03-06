@@ -592,18 +592,14 @@ li {
   border: 1px solid #aaa;
 }
 
-.--link, .navbar__projects__dropdown__link {
+/*** All links get this class ***/
+.--link {
   color: #666;
   text-decoration: none;
   cursor: pointer;
 }
-.--link:hover, .navbar__projects__dropdown__link:hover {
+.--link:hover {
   color: #c0f;
-}
-
-.--no-margin-or-padding {
-  margin: 0;
-  padding: 0;
 }
 
 .--no-list-style {
@@ -612,6 +608,11 @@ li {
 
 .--disappear-when-narrow {
   display: none;
+}
+
+/*** ***/
+.--text {
+  font-family: "Lora", serif;
 }
 
 /* Larger than phablet */
@@ -636,6 +637,8 @@ li {
   }
 }
 /*** Header ***/
+/*** This modification to .container (from Skeleton framework) gets the big
+yellow graphic from overflowing the screen. It prevents horizontal scroll. ***/
 .container {
   z-index: 1;
   position: relative;
@@ -643,10 +646,7 @@ li {
   height: 100%;
 }
 
-.text {
-  font-family: "Lora", serif;
-}
-
+/*** Styling for both first and last name ***/
 .title {
   font-size: 6rem;
   line-height: 1;
@@ -654,6 +654,7 @@ li {
   margin: 0;
 }
 
+/*** Line between the first and last name ***/
 .title__line {
   margin: 0;
   padding: 0;
@@ -663,10 +664,12 @@ li {
   border-top: 1px solid #ccc;
 }
 
+/*** The title underneath my name ***/
 .subtitle {
   padding-left: 4rem;
 }
 
+/*** Indent the second line on the title slightly ***/
 .subtitle__bottom {
   padding-left: 4rem;
 }
@@ -674,6 +677,7 @@ li {
 /*** Media Queries ***/
 /* Larger than mobile */
 @media (min-width: 400px) {
+  /*** Title can be bigger on screens that aren't tiny ***/
   .title {
     font-size: 7rem;
   }
@@ -681,6 +685,7 @@ li {
 /* Larger than phablet */
 /* Larger than tablet */
 @media (min-width: 750px) {
+  /*** On larger screen we can indent the last name ***/
   .title__lastname {
     padding-left: 4rem;
   }
@@ -688,27 +693,27 @@ li {
 /* Larger than desktop */
 /* Larger than Desktop HD */
 /*** Navigation ***/
+/*** Navigation bar has a top and bottom border and places the text in the
+middle vertically using padding ***/
 .navbar {
   border-top: 1px solid #888;
   border-bottom: 1px solid #888;
   padding: 1rem 0;
-  position: relative;
   height: 2.8rem;
 }
 
+/*** Navbar items should appear side by side and not in a vertical list ***/
 .navbar__item {
   display: inline;
-  position: relative;
 }
 
+/*** There is space between the navbar items, but no space before the first one ***/
 .navbar__item + .navbar__item {
   margin-left: 2rem;
 }
 
-.navbar__item__dropdown.--show {
-  display: block;
-}
-
+/*** The dropdown that is opened when clicking on the appropriate navbar item.
+Hidden by default. ***/
 .navbar__projects__dropdown {
   display: none;
   position: absolute;
@@ -717,24 +722,24 @@ li {
   border: 1px solid #aaa;
 }
 
+/*** Add this class to reveal the dropdown ***/
 .navbar__projects__dropdown.--show {
   display: block;
   z-index: 2;
 }
 
-.navbar__projects__dropdown__link {
-  position: relative;
-}
-
-.navbar__projects__dropdown__link__title {
+/*** Styling for text inside the dropdown for for projects ***/
+.navbar__projects__dropdown__title {
   font-size: 1.6rem;
   margin: 0.5rem 0 1rem 1rem;
 }
 
+/*** The button that allows you to scroll all the way up that appears only when
+we scroll past the navbar ***/
 .back-to-top {
   display: none;
-  right: 8%;
-  bottom: 5%;
+  right: 6%;
+  bottom: 2%;
   padding: 1rem 2.5rem;
   border: 1px solid #aaa;
   border-radius: 35%;
@@ -742,12 +747,13 @@ li {
   position: fixed;
   z-index: 2;
   cursor: pointer;
-  background: #DDD;
+  background: #ddd;
 }
 .back-to-top:hover {
   background: #aaa;
 }
 
+/*** Apply when showing the back to top button ***/
 .back-to-top.--show {
   display: block;
   z-index: 2;
@@ -758,6 +764,8 @@ li {
 /* Larger than phablet */
 /* Larger than tablet */
 @media (min-width: 750px) {
+  /*** Can position the button inside the main content area instead of the
+  margin on larger screens. ***/
   .back-to-top {
     right: 15%;
   }
@@ -875,6 +883,12 @@ li {
 .footer__row__list__label {
   padding-left: 1rem;
   font-weight: bold;
+}
+
+/*** Makes it easier to click on the links on mobile ***/
+.footer__row__list__link {
+  font-size: 1.2em;
+  padding: 1em 0;
 }
 
 /* Larger than mobile */
