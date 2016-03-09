@@ -41,29 +41,29 @@
       <nav class="row">
         <ul id="navigation" class="--text navbar">
           <li class="navbar__item">
-            <a id="navbar__projects" class="--link">Projects</a>
+            <a id="navbar__projects">Projects</a>
             <div id="navbar__projects__dropdown" class="navbar__projects__dropdown">
-              <a class="--link" href="#theatre-map">
+              <a href="#theatre-map">
                 <h4 class="navbar__projects__dropdown__title">Theatre Map</h4>
               </a>
-              <a class="--link" href="#frogger">
+              <a href="#frogger">
                 <h4 class="navbar__projects__dropdown__title">Frogger Game</h4>
               </a>
             </div>
           </li>
           <li class="navbar__item">
-            <a href="#about" class="--link">Who I am</a>
+            <a href="#about">Who I am</a>
           </li>
           <li class="navbar__item">
-            <a href="#blog" class="--link">Blog</a>
+            <a href="#blog">Blog</a>
           </li>
           <li class="navbar__item">
-            <a href="#contact" class="--link">Reach me</a>
+            <a href="#contact">Reach me</a>
           </li>
         </ul>
       </nav>
       <nav>
-        <a id="back-to-top" href="#header" class="back-to-top --link">&#8593;</a>
+        <a id="back-to-top" href="#header" class="back-to-top">&#8593;</a>
       </nav>
       <div class="row graphic graphic--has-spacing u-full-width">
         <div class="graphic__thick-line graphic--yellow graphic--rotated15">
@@ -71,7 +71,7 @@
       </div>
       <article>
         <div class="row">
-          <h2 id="theatre-map"><a class="--link" target="_blank" href="http://andreicommunication.github.io/toronto-theatre-map/">Theatre in Toronto Google Map</a></h2>
+          <h2 id="theatre-map"><a target="_blank" href="http://andreicommunication.github.io/toronto-theatre-map/">Theatre in Toronto Google Map</a></h2>
         </div>
         <div class="row">
           <div class="columns six">
@@ -80,7 +80,7 @@
           <div class="columns six">
             <ul class="project__list">
               <li>
-                Project as part of the <a class="--link" target="_blank" href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001">Frontend Web Developer Nanodegree with
+                Project as part of the <a target="_blank" href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001">Frontend Web Developer Nanodegree with
                 Udacity</a>.
               </li>
               <li>
@@ -93,7 +93,7 @@
               </li>
               <li>
                 Features planned for the future, check out the
-                <a class="--link" target="_blank"
+                <a target="_blank"
                   href="https://github.com/AndreiCommunication/toronto-theatre-map/blob/master/README.md">
                 Github README</a> for details on those.
               </li>
@@ -107,13 +107,13 @@
       </div>
       <article>
         <div class="row">
-          <h2 id="frogger"><a class="--link" target="_blank" href="http://andreicommunication.github.io/tiny-crossing/">Silly, Desktop-Only Frogger Clone</a></h2>
+          <h2 id="frogger"><a target="_blank" href="http://andreicommunication.github.io/tiny-crossing/">Silly, Desktop-Only Frogger Clone</a></h2>
         </div>
         <div class="row">
           <div class="columns six">
             <ul class="project__list">
               <li>
-                Another project as part of the <a class="--link" target="_blank" href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001">Frontend Web Developer Nanodegree with
+                Another project as part of the <a target="_blank" href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001">Frontend Web Developer Nanodegree with
                 Udacity</a>.
               </li>
               <li>
@@ -165,7 +165,33 @@
           <p class="--bump-text-size">Will try to keep this updated, and maybe even jot down an inane thought or two.</p>
           <ul class="--no-list-style">
             <li>
-              <h5><a class="--link" href="http://alistapart.com/article/all-talk-and-no-buttons-the-conversational-ui" target="_blank">All Talk and No Buttons: The Conversational UI by Matty Mariansky</a></h5>
+              <h5><a href="http://alistapart.com/column/what-will-save-us-from-the-dark-side-of-pre-processors" target="_blank">What Will Save Us from the Dark Side of CSS Pre-Processors?</a></h5>
+              <p class="--bulp-text-size">But also
+              <a href="http://alistapart.com/article/a-vision-for-our-sass">
+              A Vision for Our Sass</a> and even
+              <a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors">
+              The problem with CSS pre-processors</a> (from 2011!).</p>
+              <p>Read on <i>Tue Mar 8 2016</i>.</p>
+              <p class="--bump-text-size">As a new user of SCSS I hadn't thought
+              enough about how mixins and extends can negatively affect filesize
+              by creating duplicate styles. What seems dry can be just the opposite
+              when the mixins I wrote once in SCSS then appear over and over again
+              in my CSS... hardly ideal! The takeaway is not to mix attributes that
+              are affected by the mixin variable with attributes that aren't (in a
+              mixin). This is covered
+              <a href="http://thesassway.com/editorial/sass-doesnt-create-bad-code-bad-coders-do#mixins-will-bloat-your-css-by-repeating-code">
+              here.</a></p>
+              <p class="--bump-text-size">Tight coupling is also worth being aware
+              of - any styles that are used as extensions have to be documented
+              as such, lest edits in one style lead to unintended changes in the
+              styles that the edited one feeds into.</p>
+              <p class="--bump-text-size">Tight coupling is also worth being aware
+              of - any styles that are used as extensions have to be documented
+              as such, lest edits in one style lead to unintended changes in the
+              styles that the edited one feeds into.</p>
+            </li>
+            <li>
+              <h5><a href="http://alistapart.com/article/all-talk-and-no-buttons-the-conversational-ui" target="_blank">All Talk and No Buttons: The Conversational UI by Matty Mariansky</a></h5>
               <p>Read on <i>Sun Mar 6 2016</i>.</p>
               <p class="--bump-text-size">This and the follow up article talk about an alternative to the
               UX we're used to. Basically an AI driven experience where a user types
@@ -193,19 +219,19 @@
               <ul class="--no-list-style">
                 <li>
                   <span class="footer__row__list__label">Github</span>
-                  <a href="https://github.com/AndreiCommunication" class="footer__row__list__link --link">AndreiCommunication</a>
+                  <a href="https://github.com/AndreiCommunication" class="footer__row__list__link">AndreiCommunication</a>
                 </li>
                 <li>
                   <span class="footer__row__list__label">Twitter</span>
-                  <a href="https://twitter.com/BreathMachine" class="footer__row__list__link  --link">@BreathMachine</a>
+                  <a href="https://twitter.com/BreathMachine" class="footer__row__list__link ">@BreathMachine</a>
                 </li>
                 <li>
                   <span class="footer__row__list__label">Email</span>
-                  <a href="mailto:Andrei.Borissenko@gmail.com" class="footer__row__list__link --link">Andrei.Borissenko@gmail.com</a>
+                  <a href="mailto:Andrei.Borissenko@gmail.com" class="footer__row__list__link">Andrei.Borissenko@gmail.com</a>
                 </li>
                 <li>
                   <span class="footer__row__list__label">LinkedIn</span>
-                  <a href="#" class="footer__row__list__link --link">Andrei Borissenko</a>
+                  <a href="#" class="footer__row__list__link">Andrei Borissenko</a>
                 </li>
               </ul>
             </div>

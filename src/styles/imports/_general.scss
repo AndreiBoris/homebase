@@ -16,9 +16,9 @@
     border: 1px solid $color--gray;
 }
 
-/*** All links get this class ***/
+/*** Links ***/
 
-.--link {
+a {
     color: $color--dark-gray;
     text-decoration: none;
     cursor: pointer;
