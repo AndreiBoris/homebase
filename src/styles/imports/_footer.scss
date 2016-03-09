@@ -1,11 +1,9 @@
 /*** Provide spacing between Title and footer content ***/
-
 .footer {
     margin-top: 2rem;
 }
 
 /*** Center motto at the bottom of the page ***/
-
 .footer__row--bottom {
     text-align: center;
     width: 80%;
@@ -14,14 +12,12 @@
 }
 
 /*** Each contact information piece title ***/
-
 .footer__row__list__label {
     padding-left: 1rem;
     font-weight: bold;
 }
 
 /*** Makes it easier to click on the links on mobile ***/
-
 .footer__row__list__link {
     font-size: 1.2em;
     padding: 1em 0;
