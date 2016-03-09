@@ -225,6 +225,24 @@
                 values for mixins like this: <code>@mixin my-mixin($var: default) {}
                 </code> which could be handy!
                 </p>
+                <p class="--bump-text-size">
+                <a href="https://css-tricks.com/sass-style-guide/">
+                The Sass Style Guide by Chris Coyier
+                </a> is also a useful resource. Something that I already got out
+                of it is the advantage of using mixins for media queries. This
+                makes nesting media queries in the classes that get affected by
+                them much neater and a desirable strategy. This works because we
+                keep account of the breakpoints in a centralized place and if we
+                want to move these around we can do so without having to hunt
+                down each media query nested in the classes. It also mentions
+                the use of the funny but quite likely very useful
+                <a href="http://csswizardry.com/2013/04/shame-css/">
+                shame.css file
+                </a>
+                to help with, eventually, cleaning up hacky code. The first step
+                for me will of course be recognizing what is hacky and what is
+                solid. `!important` and IDs some to mind... otherwise?
+                </p>
             </li>
             <li>
               <h5><a href="http://alistapart.com/article/all-talk-and-no-buttons-the-conversational-ui" target="_blank">All Talk and No Buttons: The Conversational UI by Matty Mariansky</a></h5>

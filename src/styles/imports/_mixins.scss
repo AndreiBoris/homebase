@@ -1,20 +1,20 @@
-@mixin breakpoint($point){
-    @if $point == massive {
+@mixin breakpoint($size){
+    @if $size == massive {
         @media (min-width:1600px) { @content; }
     }
-    @if $point == larger {
+    @if $size == larger {
         @media (min-width:1200px) { @content; }
     }
-    @else if $point == large {
+    @else if $size == large {
         @media (min-width:1000px) { @content; }
     }
-    @else if $point == average {
+    @else if $size == average {
         @media (min-width:750px) { @content; }
     }
-    @else if $point == small {
+    @else if $size == small {
         @media (min-width:550px) { @content; }
     }
-    @else if $point == tiny {
+    @else if $size == tiny {
         @media (min-width:400px) { @content; }
     }
 }
