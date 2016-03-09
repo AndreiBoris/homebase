@@ -818,16 +818,18 @@ we scroll past the navbar ***/
 
 /*** Lines separating content mixin ***/
 /*** Black (standard) and yellow versions ***/
-.graphic__straight-lines {
+.graphic__straight-lines,
+.graphic__straight-lines--yellow {
   height: 3rem;
   position: relative;
+}
+
+.graphic__straight-lines {
   border-top: 1rem solid #000;
   border-bottom: 1.5rem solid #000;
 }
 
 .graphic__straight-lines--yellow {
-  height: 3rem;
-  position: relative;
   border-top: 1rem solid #ee0;
   border-bottom: 1.5rem solid #ee0;
 }
@@ -836,6 +838,8 @@ we scroll past the navbar ***/
 /* Larger than mobile */
 /* Larger than phablet */
 @media (min-width: 550px) {
+  /*** Otherwise there is too much room between the graphic and the next
+  heading. ***/
   .graphic--has-spacing {
     padding-bottom: 14vw;
   }

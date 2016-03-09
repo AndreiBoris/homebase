@@ -38,20 +38,20 @@
 }
 
 
-
-
-
-
 /*** Lines separating content mixin ***/
 
 @mixin graphic__straight-lines($color) {
-    height: 3rem;
-    position: relative;
     border-top: 1rem solid $color;
     border-bottom: 1.5rem solid $color;
 }
 
 /*** Black (standard) and yellow versions ***/
+
+.graphic__straight-lines,
+.graphic__straight-lines--yellow {
+    height: 3rem;
+    position: relative;
+}
 
 .graphic__straight-lines {
     @include graphic__straight-lines($color--black);
@@ -69,6 +69,8 @@
 
 /* Larger than phablet */
 @media (min-width:550px) {
+    /*** Otherwise there is too much room between the graphic and the next
+    heading. ***/
     .graphic--has-spacing {
         padding-bottom: 14vw;
     }
