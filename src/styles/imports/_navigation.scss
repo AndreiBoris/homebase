@@ -12,11 +12,6 @@ middle vertically using padding ***/
     display: inline;
 }
 
-/*** There is space between the navbar items, but no space before the first one ***/
-.navbar__item + .navbar__item {
-    margin-left: 2rem;
-}
-
 /*** The dropdown that is opened when clicking on the appropriate navbar item.
 Hidden by default. ***/
 .navbar__projects__dropdown {
@@ -27,12 +22,6 @@ Hidden by default. ***/
     min-width: 13em;
     // Allow space for words.
     border: 1px solid $color--gray;
-}
-
-/*** Add this class to reveal the dropdown ***/
-.navbar__projects__dropdown.--show {
-    display: block;
-    z-index: 2;
 }
 
 /*** Styling for text inside the dropdown for for projects ***/
@@ -59,6 +48,17 @@ we scroll past the navbar ***/
     &:hover {
         background: $color--gray;
     }
+}
+
+/*** There is space between the navbar items, but no space before the first one ***/
+.navbar__item + .navbar__item {
+    margin-left: 2rem;
+}
+
+/*** Add this class to reveal the dropdown ***/
+.navbar__projects__dropdown.--show {
+    display: block;
+    z-index: 2;
 }
 
 /*** Apply when showing the back to top button ***/

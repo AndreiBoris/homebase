@@ -165,12 +165,14 @@
           <p class="--bump-text-size">Will try to keep this updated, and maybe even jot down an inane thought or two.</p>
           <ul class="--no-list-style">
             <li>
-              <h5><a href="http://alistapart.com/column/what-will-save-us-from-the-dark-side-of-pre-processors" target="_blank">What Will Save Us from the Dark Side of CSS Pre-Processors?</a></h5>
-              <p class="--bulp-text-size">But also
+              <h5><a href="http://alistapart.com/column/what-will-save-us-from-the-dark-side-of-pre-processors" target="_blank">
+              What Will Save Us from the Dark Side of CSS Pre-Processors? by
+              Lyza Danger Gardner</a>, but also
               <a href="http://alistapart.com/article/a-vision-for-our-sass">
-              A Vision for Our Sass</a> and even
+              A Vision for Our Sass by Felicity Evans</a> and even
               <a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors">
-              The problem with CSS pre-processors</a> (from 2011!).</p>
+              The problem with CSS pre-processors by Miller H. Borges Medeiros</a>
+              (from 2011!).</h5>
               <p>Read on <i>Tue Mar 8 2016</i>.</p>
               <p class="--bump-text-size">As a new user of SCSS I hadn't thought
               enough about how mixins and extends can negatively affect filesize
@@ -178,17 +180,37 @@
               when the mixins I wrote once in SCSS then appear over and over again
               in my CSS... hardly ideal! The takeaway is not to mix attributes that
               are affected by the mixin variable with attributes that aren't (in a
-              mixin). This is covered
+              mixin).
               <a href="http://thesassway.com/editorial/sass-doesnt-create-bad-code-bad-coders-do#mixins-will-bloat-your-css-by-repeating-code">
-              here.</a></p>
+              This is covered here.</a></p>
               <p class="--bump-text-size">Tight coupling is also worth being aware
               of - any styles that are used as extensions have to be documented
               as such, lest edits in one style lead to unintended changes in the
               styles that the edited one feeds into.</p>
-              <p class="--bump-text-size">Tight coupling is also worth being aware
-              of - any styles that are used as extensions have to be documented
-              as such, lest edits in one style lead to unintended changes in the
-              styles that the edited one feeds into.</p>
+              <p class="--bump-text-size">
+              <a href="http://csswizardry.com/2014/01/extending-silent-classes-in-sass/">
+                This article</a> by Harry Roberts goes even further in pointing
+                out the perils of <code>@extend</code>, namely, that it extends
+                all instances, of the class, which is perhaps undesirable. Maybe
+                worth avoiding entirely. The proposed solution involves <b>silent
+                classes</b>, written like so</p>
+                <pre><code>.foo,
+%foo {
+  color: #acce55;
+}
+
+.bar .foo {
+  background-color: #0dba11;
+}
+
+.baz {
+  @extend %foo;
+}                </code></pre>
+                <p class="--bump-text-size">
+                As this will allow us to avoid extending the
+                <code>background-color</code> into <code>baz</code>, instead
+                extending only the <code>color</code> property.
+                </p>
             </li>
             <li>
               <h5><a href="http://alistapart.com/article/all-talk-and-no-buttons-the-conversational-ui" target="_blank">All Talk and No Buttons: The Conversational UI by Matty Mariansky</a></h5>

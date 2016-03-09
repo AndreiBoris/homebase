@@ -1,3 +1,20 @@
+/*** Bump size of code block text ***/
+
+pre {
+    font-size: 2rem;
+}
+
+/*** Links ***/
+a {
+    color: $color--dark-gray;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $color--link--hover;
+    }
+}
+
 /*** Adds space above an element when necessary ***/
 .--has-spacing--top {
     margin-top: 2rem;
@@ -11,17 +28,6 @@
 /*** Simple border to use whenever ***/
 .--simple-border {
     border: 1px solid $color--gray;
-}
-
-/*** Links ***/
-a {
-    color: $color--dark-gray;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:hover {
-        color: $color--link--hover;
-    }
 }
 
 /*** Remove list styling when needed ***/

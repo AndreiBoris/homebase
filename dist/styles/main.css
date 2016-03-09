@@ -567,6 +567,22 @@ li {
   margin-bottom: 1rem;
 }
 
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #f1f1f1;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
+
 /*** Contents ***/
 /*
     Variables
@@ -588,6 +604,21 @@ li {
 /*** Used for links on hover ***/
 /*** Top and bottom border for the navbar ***/
 /*** General ***/
+/*** Bump size of code block text ***/
+pre {
+  font-size: 2rem;
+}
+
+/*** Links ***/
+a {
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #c0f;
+}
+
 /*** Adds space above an element when necessary ***/
 .--has-spacing--top {
   margin-top: 2rem;
@@ -601,16 +632,6 @@ li {
 /*** Simple border to use whenever ***/
 .--simple-border {
   border: 1px solid #aaa;
-}
-
-/*** Links ***/
-a {
-  color: #666;
-  text-decoration: none;
-  cursor: pointer;
-}
-a:hover {
-  color: #c0f;
 }
 
 /*** Remove list styling when needed ***/
@@ -714,11 +735,6 @@ middle vertically using padding ***/
   display: inline;
 }
 
-/*** There is space between the navbar items, but no space before the first one ***/
-.navbar__item + .navbar__item {
-  margin-left: 2rem;
-}
-
 /*** The dropdown that is opened when clicking on the appropriate navbar item.
 Hidden by default. ***/
 .navbar__projects__dropdown {
@@ -727,12 +743,6 @@ Hidden by default. ***/
   margin: 1.4rem 0 0 0;
   min-width: 13em;
   border: 1px solid #aaa;
-}
-
-/*** Add this class to reveal the dropdown ***/
-.navbar__projects__dropdown.--show {
-  display: block;
-  z-index: 2;
 }
 
 /*** Styling for text inside the dropdown for for projects ***/
@@ -758,6 +768,17 @@ we scroll past the navbar ***/
 }
 .back-to-top:hover {
   background: #aaa;
+}
+
+/*** There is space between the navbar items, but no space before the first one ***/
+.navbar__item + .navbar__item {
+  margin-left: 2rem;
+}
+
+/*** Add this class to reveal the dropdown ***/
+.navbar__projects__dropdown.--show {
+  display: block;
+  z-index: 2;
 }
 
 /*** Apply when showing the back to top button ***/
@@ -818,7 +839,8 @@ we scroll past the navbar ***/
 
 /*** Lines separating content mixin ***/
 /*** Black (standard) and yellow versions ***/
-.graphic__straight-lines, .graphic__straight-lines--yellow {
+.graphic__straight-lines,
+.graphic__straight-lines--yellow {
   height: 3rem;
   position: relative;
 }
