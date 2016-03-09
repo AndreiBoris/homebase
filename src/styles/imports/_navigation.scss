@@ -48,6 +48,10 @@ we scroll past the navbar ***/
     &:hover {
         background: $color--gray;
     }
+
+    @include breakpoint(average) {
+        right: 15%;
+    }
 }
 
 /*** There is space between the navbar items, but no space before the first one ***/
@@ -65,32 +69,4 @@ we scroll past the navbar ***/
 .back-to-top.--show {
     display: block;
     z-index: 2;
-}
-
-/*** Media Queries ***/
-
-/* Larger than mobile */
-@media (min-width:400px) {
-}
-
-/* Larger than phablet */
-@media (min-width:550px) {
-}
-
-/* Larger than tablet */
-@media (min-width:750px) {
-
-    /*** Can position the button inside the main content area instead of the
-    margin on larger screens. ***/
-    .back-to-top {
-        right: 15%;
-    }
-}
-
-/* Larger than desktop */
-@media (min-width:1000px) {
-}
-
-/* Larger than Desktop HD */
-@media (min-width:1200px) {
 }

@@ -43,22 +43,12 @@ a {
 /*** Remove this element on narrow screens (see media query below) ***/
 .--disappear-when-narrow {
     display: none;
-}
-
-/* Larger than phablet */
-@media (min-width:550px) {
-
-    /*** Screen is wide enough to display these elements ***/
-    .--disappear-when-narrow {
+    @include breakpoint(small) {
         display: block;
     }
 }
 
-/* Larger than desktop */
-@media (min-width:1000px) {
-
-    /*** Apply to some text so that it fills space and looks better on big
-    screens ***/
+@include breakpoint(large) {
     .--bump-text-size {
         font-size: 2rem;
     }

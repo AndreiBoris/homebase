@@ -1,37 +1,17 @@
 .project__image {
     transition: box-shadow .2s, transform .2s ease-in-out;
-}
-.project__list {
-    padding: 2rem 0;
-}
 
-/*** Media Queries ***/
-
-/* Larger than mobile */
-@media (min-width:400px) {
-}
-
-/* Larger than phablet */
-@media (min-width:550px) {
-}
-
-/* Larger than tablet */
-@media (min-width:750px) {
-    .project__image {
+    @include breakpoint(average) {
         &:hover {
             box-shadow: 1px 0.25vw 5px #888888;
             transform: translate3d(0, -0.5vw, 0);
         }
     }
 }
+.project__list {
+    padding: 2rem 0;
 
-/* Larger than desktop */
-@media (min-width:1000px) {
-    .project__list {
+    @include breakpoint(large) {
         font-size: 2rem;
     }
-}
-
-/* Larger than Desktop HD */
-@media (min-width:1200px) {
 }

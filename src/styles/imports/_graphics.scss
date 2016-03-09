@@ -8,6 +8,16 @@
 .graphic--has-spacing {
     padding-top: 8vw;
     padding-bottom: 18vw;
+
+    @include breakpoint(small) {
+        padding-bottom: 14vw;
+    }
+    @include breakpoint(larger) {
+        padding-bottom: 13vw;
+    }
+    @include breakpoint(massive) {
+        padding-bottom: 10vw;
+    }
 }
 
 /*** Spacing for smaller straight-line graphics ***/
@@ -48,32 +58,4 @@
 }
 .graphic__straight-lines--yellow {
     @include graphic__straight-lines($color--yellow);
-}
-
-/*** Media Queries ***/
-
-/* Larger than mobile */
-@media (min-width:400px) {
-}
-
-/* Larger than phablet */
-@media (min-width:550px) {
-
-    /*** Otherwise there is too much room between the graphic and the next
-    heading. ***/
-    .graphic--has-spacing {
-        padding-bottom: 14vw;
-    }
-}
-
-/* Larger than tablet */
-@media (min-width:750px) {
-}
-
-/* Larger than desktop */
-@media (min-width:1000px) {
-}
-
-/* Larger than Desktop HD */
-@media (min-width:1200px) {
 }

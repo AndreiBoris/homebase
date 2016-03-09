@@ -603,6 +603,7 @@ pre > code {
 /*** Used to style links ***/
 /*** Used for links on hover ***/
 /*** Top and bottom border for the navbar ***/
+/*** Mixin (for media queries) ***/
 /*** General ***/
 /*** Bump size of code block text ***/
 pre {
@@ -648,18 +649,13 @@ a:hover {
 .--disappear-when-narrow {
   display: none;
 }
-
-/* Larger than phablet */
 @media (min-width: 550px) {
-  /*** Screen is wide enough to display these elements ***/
   .--disappear-when-narrow {
     display: block;
   }
 }
-/* Larger than desktop */
+
 @media (min-width: 1000px) {
-  /*** Apply to some text so that it fills space and looks better on big
-  screens ***/
   .--bump-text-size {
     font-size: 2rem;
   }
@@ -681,7 +677,17 @@ yellow graphic from overflowing the screen. It prevents horizontal scroll. ***/
   padding: 0;
   margin: 0;
 }
+@media (min-width: 400px) {
+  .title {
+    font-size: 7rem;
+  }
+}
 
+@media (min-width: 750px) {
+  .title__lastname {
+    padding-left: 4rem;
+  }
+}
 /*** Line between the first and last name ***/
 .title__line {
   margin: 0;
@@ -702,24 +708,6 @@ yellow graphic from overflowing the screen. It prevents horizontal scroll. ***/
   padding-left: 4rem;
 }
 
-/*** Media Queries ***/
-/* Larger than mobile */
-@media (min-width: 400px) {
-  /*** Title can be bigger on screens that aren't tiny ***/
-  .title {
-    font-size: 7rem;
-  }
-}
-/* Larger than phablet */
-/* Larger than tablet */
-@media (min-width: 750px) {
-  /*** On larger screen we can indent the last name ***/
-  .title__lastname {
-    padding-left: 4rem;
-  }
-}
-/* Larger than desktop */
-/* Larger than Desktop HD */
 /*** Navigation ***/
 /*** Navigation bar has a top and bottom border and places the text in the
 middle vertically using padding ***/
@@ -769,6 +757,11 @@ we scroll past the navbar ***/
 .back-to-top:hover {
   background: #aaa;
 }
+@media (min-width: 750px) {
+  .back-to-top {
+    right: 15%;
+  }
+}
 
 /*** There is space between the navbar items, but no space before the first one ***/
 .navbar__item + .navbar__item {
@@ -787,19 +780,6 @@ we scroll past the navbar ***/
   z-index: 2;
 }
 
-/*** Media Queries ***/
-/* Larger than mobile */
-/* Larger than phablet */
-/* Larger than tablet */
-@media (min-width: 750px) {
-  /*** Can position the button inside the main content area instead of the
-  margin on larger screens. ***/
-  .back-to-top {
-    right: 15%;
-  }
-}
-/* Larger than desktop */
-/* Larger than Desktop HD */
 /*** Graphics ***/
 /*** Graphics used to separate content shouldn't steal clicks from other elements ***/
 .graphic {
@@ -811,6 +791,21 @@ we scroll past the navbar ***/
 .graphic--has-spacing {
   padding-top: 8vw;
   padding-bottom: 18vw;
+}
+@media (min-width: 550px) {
+  .graphic--has-spacing {
+    padding-bottom: 14vw;
+  }
+}
+@media (min-width: 1200px) {
+  .graphic--has-spacing {
+    padding-bottom: 13vw;
+  }
+}
+@media (min-width: 1600px) {
+  .graphic--has-spacing {
+    padding-bottom: 10vw;
+  }
 }
 
 /*** Spacing for smaller straight-line graphics ***/
@@ -855,34 +850,12 @@ we scroll past the navbar ***/
   border-bottom: 1.5rem solid #ee0;
 }
 
-/*** Media Queries ***/
-/* Larger than mobile */
-/* Larger than phablet */
-@media (min-width: 550px) {
-  /*** Otherwise there is too much room between the graphic and the next
-  heading. ***/
-  .graphic--has-spacing {
-    padding-bottom: 14vw;
-  }
-}
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
 /*** Projects ***/
 .project__image {
   transition: box-shadow .2s, -webkit-transform .2s ease-in-out;
   transition: box-shadow .2s, transform .2s ease-in-out;
   transition: box-shadow .2s, transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
-
-.project__list {
-  padding: 2rem 0;
-}
-
-/*** Media Queries ***/
-/* Larger than mobile */
-/* Larger than phablet */
-/* Larger than tablet */
 @media (min-width: 750px) {
   .project__image:hover {
     box-shadow: 1px 0.25vw 5px #888888;
@@ -890,13 +863,16 @@ we scroll past the navbar ***/
             transform: translate3d(0, -0.5vw, 0);
   }
 }
-/* Larger than desktop */
+
+.project__list {
+  padding: 2rem 0;
+}
 @media (min-width: 1000px) {
   .project__list {
     font-size: 2rem;
   }
 }
-/* Larger than Desktop HD */
+
 /*** Footer ***/
 /*** Provide spacing between Title and footer content ***/
 .footer {
@@ -922,9 +898,3 @@ we scroll past the navbar ***/
   font-size: 1.2em;
   padding: 1em 0;
 }
-
-/* Larger than mobile */
-/* Larger than phablet */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
