@@ -1,6 +1,5 @@
 /*** Navigation bar has a top and bottom border and places the text in the
 middle vertically using padding ***/
-
 .navbar {
     border-top: $navbar--border;
     border-bottom: $navbar--border;
@@ -9,37 +8,34 @@ middle vertically using padding ***/
 }
 
 /*** Navbar items should appear side by side and not in a vertical list ***/
-
 .navbar__item {
     display: inline;
 }
 
 /*** There is space between the navbar items, but no space before the first one ***/
-
 .navbar__item + .navbar__item {
     margin-left: 2rem;
 }
 
 /*** The dropdown that is opened when clicking on the appropriate navbar item.
 Hidden by default. ***/
-
 .navbar__projects__dropdown {
     display: none;
-    position: absolute; // Required to not upset the rest of the flow.
+    position: absolute;
+    // Required to not upset the rest of the flow.
     margin: 1.4rem 0 0 0;
-    min-width: 13em; // Allow space for words.
+    min-width: 13em;
+    // Allow space for words.
     border: 1px solid $color--gray;
 }
 
 /*** Add this class to reveal the dropdown ***/
-
 .navbar__projects__dropdown.--show {
     display: block;
     z-index: 2;
 }
 
 /*** Styling for text inside the dropdown for for projects ***/
-
 .navbar__projects__dropdown__title {
     font-size: 1.6rem;
     margin: 0.5rem 0 1rem 1rem;
@@ -47,7 +43,6 @@ Hidden by default. ***/
 
 /*** The button that allows you to scroll all the way up that appears only when
 we scroll past the navbar ***/
-
 .back-to-top {
     display: none;
     right: 6%;
@@ -67,7 +62,6 @@ we scroll past the navbar ***/
 }
 
 /*** Apply when showing the back to top button ***/
-
 .back-to-top.--show {
     display: block;
     z-index: 2;
@@ -85,6 +79,7 @@ we scroll past the navbar ***/
 
 /* Larger than tablet */
 @media (min-width:750px) {
+
     /*** Can position the button inside the main content area instead of the
     margin on larger screens. ***/
     .back-to-top {

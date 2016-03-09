@@ -818,8 +818,7 @@ we scroll past the navbar ***/
 
 /*** Lines separating content mixin ***/
 /*** Black (standard) and yellow versions ***/
-.graphic__straight-lines,
-.graphic__straight-lines--yellow {
+.graphic__straight-lines, .graphic__straight-lines--yellow {
   height: 3rem;
   position: relative;
 }

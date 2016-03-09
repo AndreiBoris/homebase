@@ -1,62 +1,50 @@
 /*** Graphics used to separate content shouldn't steal clicks from other elements ***/
-
 .graphic {
     position: relative;
     z-index: 0;
 }
 
 /*** Spacing for the big graphic at the top ***/
-
 .graphic--has-spacing {
     padding-top: 8vw;
     padding-bottom: 18vw;
 }
 
 /*** Spacing for smaller straight-line graphics ***/
-
 .graphic--has-spacing--medium {
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
 
 /*** Styles for large graphic seen during page load ***/
-
 .graphic__thick-line {
     height: 25rem;
     border: 1px solid $color--black;
     position: relative;
 }
-
 .graphic--yellow {
     background-color: $color--yellow;
 }
-
 .graphic--rotated15 {
     transform: rotate(-15deg);
     left: -40%;
     width: 200%;
 }
 
-
 /*** Lines separating content mixin ***/
-
 @mixin graphic__straight-lines($color) {
     border-top: 1rem solid $color;
     border-bottom: 1.5rem solid $color;
 }
 
 /*** Black (standard) and yellow versions ***/
-
-.graphic__straight-lines,
-.graphic__straight-lines--yellow {
+.graphic__straight-lines, .graphic__straight-lines--yellow {
     height: 3rem;
     position: relative;
 }
-
 .graphic__straight-lines {
     @include graphic__straight-lines($color--black);
 }
-
 .graphic__straight-lines--yellow {
     @include graphic__straight-lines($color--yellow);
 }
@@ -69,6 +57,7 @@
 
 /* Larger than phablet */
 @media (min-width:550px) {
+
     /*** Otherwise there is too much room between the graphic and the next
     heading. ***/
     .graphic--has-spacing {
