@@ -172,15 +172,18 @@
               A Vision for Our Sass by Felicity Evans</a> and even
               <a href="http://blog.millermedeiros.com/the-problem-with-css-pre-processors">
               The problem with CSS pre-processors by Miller H. Borges Medeiros</a>
-              (from 2011!).</h5>
+              (from 2011!). Though realistically I also read a bunch of stuff
+              by <a href="http://csswizardry.com/about/">Harry Roberts.</a></h5>
               <p>Read on <i>Tue Mar 8 2016</i>.</p>
               <p class="--bump-text-size">As a new user of SCSS I hadn't thought
               enough about how mixins and extends can negatively affect filesize
               by creating duplicate styles. What seems dry can be just the opposite
               when the mixins I wrote once in SCSS then appear over and over again
-              in my CSS... hardly ideal! The takeaway is not to mix attributes that
-              are affected by the mixin variable with attributes that aren't (in a
-              mixin).
+              in my CSS... perhaps not ideal? Harry Roberts does point out
+              <a href="http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/#when-to-use-a-mixin">
+              here</a> how what we should be after is a "single source of truth"
+              rather than avoiding repetition in the compiled css. I haven't
+              formed a complete opinion here myself.
               <a href="http://thesassway.com/editorial/sass-doesnt-create-bad-code-bad-coders-do#mixins-will-bloat-your-css-by-repeating-code">
               This is covered here.</a></p>
               <p class="--bump-text-size">Tight coupling is also worth being aware
@@ -210,6 +213,17 @@
                 As this will allow us to avoid extending the
                 <code>background-color</code> into <code>baz</code>, instead
                 extending only the <code>color</code> property.
+                </p>
+                <p class="--bump-text-size">
+                And, of course, Harry continues in this line of unpacking the
+                perils of `@extend` in <a href="http://csswizardry.com/2016/02/mixins-better-for-performance/">
+                a much more recent article.</a> Where he points out that after
+                gzipping, the repetition from mixins actually resolves to a
+                smaller, more efficient filesize than even `@extend`s that result
+                in smaller .css files sizes due to stacked classes. Somewhere
+                along the way I also picked up the possibility of setting default
+                values for mixins like this: <code>@mixin my-mixin($var: default) {}
+                </code> which could be handy!
                 </p>
             </li>
             <li>
