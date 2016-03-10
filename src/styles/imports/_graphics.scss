@@ -9,6 +9,10 @@
     padding-top: 8vw;
     padding-bottom: 18vw;
 
+    // These media queries just ensure that no extra white space
+    // crops up as the viewport is expanded. Perhaps it's just
+    // better if we opt out of this entirely in favour of using
+    // some more sane rem based measurement.
     @include breakpoint(small) {
         padding-bottom: 14vw;
     }
