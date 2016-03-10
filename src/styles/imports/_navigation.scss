@@ -43,7 +43,7 @@ we scroll past the navbar ***/
     position: fixed;
     z-index: 2;
     cursor: pointer;
-    background: $color--light-gray;
+    background: $color--unselected;
 
     &:hover {
         background: $color--gray;

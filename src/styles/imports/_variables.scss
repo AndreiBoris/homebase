@@ -1,9 +1,16 @@
 /*** Font for the whole page ***/
-$font-stack: "Lora", serif;/*** Yellow colour for graphics ***/
-$color--yellow: #ee0;/*** Black used in many places ***/
-$color--black: #000;/*** Used in back to top button ***/
-$color--light-gray: #ddd;/*** Used for basic borders and back to top button ***/
-$color--gray: #aaa;/*** Used to style links ***/
-$color--dark-gray: #666;/*** Used for links on hover ***/
-$color--link--hover: #c0f;/*** Top and bottom border for the navbar ***/
+$font-stack: "Lora", serif;
+/*** For graphics ***/
+$color--graphics: #ee0; // yellow
+/*** Black used in many places ***/
+$color--black: #000;
+/*** Used for basic borders and back to top button ***/
+$color--gray: #aaa;
+/*** Used in back to top button ***/
+$color--unselected: #ddd; // light gray
+/*** Used to style links ***/
+$color--link: #666;
+/*** Used for links on hover ***/
+$color--link--hover: #c0f;
+/*** Top and bottom border for the navbar ***/
 $navbar--border: 1px solid #888;

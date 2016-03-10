@@ -33,7 +33,7 @@
     position: relative;
 }
 .graphic--yellow {
-    background-color: $color--yellow;
+    background-color: $color--graphics;
 }
 .graphic--rotated15 {
     transform: rotate(-15deg);
@@ -57,5 +57,5 @@
     @include graphic__straight-lines($color--black);
 }
 .graphic__straight-lines--yellow {
-    @include graphic__straight-lines($color--yellow);
+    @include graphic__straight-lines($color--graphics);
 }
