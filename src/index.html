@@ -162,7 +162,6 @@
         </div>
         <article>
           <h4>Articles I've Read</h4>
-          <p class="--bump-text-size">Will try to keep this updated, and maybe even jot down an inane thought or two.</p>
           <ul class="--no-list-style">
             <li>
               <h5><a href="http://alistapart.com/column/what-will-save-us-from-the-dark-side-of-pre-processors" target="_blank">
@@ -189,15 +188,16 @@
               This is covered here.</a></p>
               <p class="--bump-text-size">Tight coupling is also worth being aware
               of - any styles that are used as extensions have to be documented
-              as such, lest edits in one style lead to unintended changes in the
-              styles that the edited one feeds into.</p>
+              as such, lest edits of one class lead to unintended changes in the
+              styles that the edited class extends into.</p>
               <p class="--bump-text-size">
               <a href="http://csswizardry.com/2014/01/extending-silent-classes-in-sass/">
                 This article</a> by Harry Roberts goes even further in pointing
-                out the perils of <code>@extend</code>, namely, that it extends
-                all instances of the class, which is perhaps undesirable, and maybe
-                worth avoiding entirely. The proposed solution involves <b>silent
-                classes</b>, written like so</p>
+                out issues with <code>@extend</code>. Namely, that it extends
+                all instances of the class, including those that are part of more
+                specific selectors with other classes/tags/pseudo classes. This
+                is perhaps undesirable, and maybe worth avoiding entirely. The
+                proposed solution involves <b>silent classes</b>, written like so</p>
                 <pre><code>.foo,
 %foo {
   color: #acce55;
@@ -241,7 +241,7 @@
                 <a href="http://csswizardry.com/2013/04/shame-css/">
                 shame.css file
                 </a>
-                to help with, eventually, cleaning up hacky code. The first step
+                to help prioritize cleaning up hacky code. The first step
                 for me will of course be recognizing what is hacky and what is
                 solid. `!important` and IDs some to mind... but apart from that?
                 </p>
@@ -258,8 +258,8 @@
                 communicate more clearly and allow for more reusability.
                 </p>
                 <p class="--bump-text-size">
-                Felicity Evans in <a href="http://alistapart.com/article/a-vision-for-our-sass">
-                A Vision for Our Sass
+                <a href="http://alistapart.com/article/a-vision-for-our-sass">
+                Felicity Evans in A Vision for Our Sass
                 </a> mentions the need to name variables based on their function
                 rather than the way they look. This makes sense when thinking
                 about changing the style of a page so that you can avoid having
