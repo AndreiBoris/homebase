@@ -11,13 +11,18 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     del = require('del'),
     htmlmin = require('gulp-htmlmin'),
-    imageResize = require('gulp-image-resize'),
+    // imageResize = require('gulp-image-resize'),
     livereload = require('gulp-livereload'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     babel = require('gulp-babel'),
     inlinesource = require('gulp-inline-source');
 
+gulp.task('inlinecss', function() {
+    return gulp.src('./*.html')
+        .pipe(inlinesource())
+        .pipe(gulp.dest('.'));
+});
 
 // Styles
 gulp.task('styles', function() {
@@ -36,6 +41,7 @@ gulp.task('styles', function() {
             message: 'Styles task complete'
         }));
 });
+
 // Scripts
 gulp.task('scripts', function() {
     return gulp.src(['src/scripts/**/*.js'])
@@ -86,7 +92,8 @@ gulp.task('minify-html', function() {
 // Default
 gulp.task('default',
     gulp.series('clean',
-        gulp.parallel('styles', 'scripts', 'images', 'minify-html'))
+        gulp.parallel('styles', 'scripts', 'images', 'minify-html'),
+        gulp.series('inlinecss'))
 );
 
 // Lint gulpfile.js
@@ -102,7 +109,7 @@ gulp.task('gulpfile-lint', function() {
 gulp.task('watch', function() {
     livereload.listen();
     // Watch .scss files
-    gulp.watch('src/styles/**/*.scss', gulp.series('styles'));
+    gulp.watch('src/styles/**/*.scss', gulp.series(gulp.parallel('styles', 'minify-html'), 'inlinecss'));
     // Watch .js files
     gulp.watch('src/scripts/**/*.js', gulp.series('scripts'));
     // Watch image files
