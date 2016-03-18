@@ -37,6 +37,7 @@ View the page by opening `dist/index.html` in your favourite browser.
 [jQuery](https://github.com/jquery/jquery),
 [Require.js](https://github.com/requirejs/requirejs),
 [Filament Group's LoadCSS script](https://github.com/filamentgroup/loadCSS),
+[Jasmine](https://github.com/jasmine/jasmine),
 and
 [Skeleton-Sass](https://github.com/WhatsNewSaes/Skeleton-Sass)
 are under the MIT license with the licenses provided with each component are
