@@ -39,7 +39,7 @@ View the page by opening `dist/index.html` in your favourite browser.
 [Filament Group's LoadCSS script](https://github.com/filamentgroup/loadCSS),
 and
 [Skeleton-Sass](https://github.com/WhatsNewSaes/Skeleton-Sass)
-are under the MIT license with the licenses provided with each component
+are under the MIT license with the licenses provided with each component are
 available in the directories from which they are used (mostly within `dist`).
 The exception being Skeleton-Sass which didn't provide a copied version of the
 license but [a link to the online version.](http://opensource.org/licenses/mit-license.php)
