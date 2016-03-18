@@ -30,6 +30,20 @@ gulp
 
 View the page by opening `dist/index.html` in your favourite browser.
 
+### Running tests
+
+Once you have the npm dependencies, you should be able to run Jasmine tests
+by using the command
+
+```
+npm test
+```
+
+**NOTE** the way it is configured it opens up Google Chrome to show the result
+of your tests. If this is undesirable you can change the `test` script in
+`package.json` or build the project using `gulp` and then opening
+`dist/tests/SpecRunner.html` in your favourite browser.
+
 ### Licenses of Components
 
 [Backbone.js](https://github.com/jashkenas/backbone),
