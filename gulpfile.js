@@ -19,9 +19,9 @@ var gulp = require('gulp'),
     inlinesource = require('gulp-inline-source');
 
 gulp.task('inlinecss', function() {
-    return gulp.src('./*.html')
+    return gulp.src('dist/*.html')
         .pipe(inlinesource())
-        .pipe(gulp.dest('.'));
+        .pipe(gulp.dest('dist'));
 });
 
 // Styles
@@ -77,7 +77,7 @@ gulp.task('images', function() {
 });
 // Clean
 gulp.task('clean', function() {
-    return del(['dist/styles', 'dist/scripts', './index.html']);
+    return del(['dist/styles', 'dist/scripts', 'dist/index.html']);
 });
 
 // Minify HTML
@@ -86,7 +86,7 @@ gulp.task('minify-html', function() {
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest('.'));
+        .pipe(gulp.dest('dist'));
 });
 
 // Default
