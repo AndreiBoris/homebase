@@ -75,9 +75,11 @@ gulp.task('images', function() {
         }))
         .pipe(gulp.dest('dist/images'));
 });
-// Clean
+// Clean. Don't touch the libs in the dist folder. Those don't get edited during
+// the build phase anyway.
 gulp.task('clean', function() {
-    return del(['dist/styles', 'dist/scripts', 'dist/index.html']);
+    return del(['dist/styles', 'dist/scripts/**/*', '!dist/scripts/{libs,libs/**/*}',
+        'dist/index.html']);
 });
 
 // Minify HTML
