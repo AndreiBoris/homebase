@@ -76,15 +76,15 @@ var supportsWoff2 = (function(win) {
 })(this);
 
 // Default to WOFF
-var fontFileUrl = 'dist/perm/fonts/data-woff.css',
+var fontFileUrl = 'perm/fonts/data-woff.css',
     ua = window.navigator.userAgent;
 
 // Use WOFF2 if supported
 if (supportsWoff2) {
-    fontFileUrl = 'dist/perm/fonts/data-woff2.css';
+    fontFileUrl = 'perm/fonts/data-woff2.css';
 } else if (ua.indexOf('Android 4.') > -1 && ua.indexOf('like Gecko') > -1 && ua.indexOf('Chrome') === -1) {
     // Android's Default Browser needs TTF instead of WOFF
-    fontFileUrl = 'dist/perm/fonts/data-ttf.css';
+    fontFileUrl = 'perm/fonts/data-ttf.css';
 }
 
 loadCSS(fontFileUrl);
