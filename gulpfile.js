@@ -48,7 +48,7 @@ gulp.task('scripts', function() {
         .pipe(babel())
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
-        .pipe(concat('main.js'))
+        // .pipe(concat('main.js'))
         .pipe(gulp.dest('dist/scripts'))
         .pipe(rename({
             suffix: '.min'
