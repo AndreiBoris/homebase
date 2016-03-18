@@ -26,5 +26,9 @@
   },
   "dependencies": {},
   "license": {},
-  "repository": {}
+  "repository": {},
+  "scripts":{
+    "pretest": "gulp",
+    "test": "google-chrome dist/tests/SpecRunner.html"
+  }
 }
