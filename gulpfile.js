@@ -117,7 +117,7 @@ gulp.task('watch', function() {
     // Watch image files
     gulp.watch('src/images/**/*', gulp.series('images'));
     // Watch src/index.html
-    gulp.watch('src/*.html', gulp.series('minify-html'));
+    gulp.watch('src/*.html', gulp.series('minify-html', 'inlinecss'));
     // Watch this file
     gulp.watch('gulpfile.js', gulp.series('gulpfile-lint'));
 });
