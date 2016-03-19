@@ -1,5 +1,7 @@
 * [Top](#home-website)
 * [Status](#status)
+    * [Planned Features](#planned-features)
+    * [Next Steps](#next-steps)
 * [Instructures](#how-to-view)
 * [Tests](#running-tests)
 * [Associated Licenses](#license)
@@ -12,16 +14,24 @@ Will be transferred to an appropriate hosting service soon.
 
 Here I will post the current state of this project.
 
-ETA: End of April 2016
+ETA for generally complete project: **End of April 2016**
 
-Current: Just incorporated requireJS and Backbone scaffolding. Removed gh-pages
-costing to allow for cleaner directory structure. (Fri Mar 18 20:59:51 2016)
+#### Planned Features
 
-Next Steps:
+* A blog with comments enabled
+* Backbone single page application
+* Communicate with backend server that stores a database of blog entries
+* Solid Jasmine testing suite
+* Components broken up into requireJS modules
+
+Current: The old version of this website is currently available on the master
+branch. It is a bare, Skeleton-based website. Best feature: it loads fast.
+
+#### Next Steps:
 
 * Incorporate requireJS and Backbone scaffolding. Remove gh-pages hosting to
 allow for cleaner directory structure. (Fri Mar 18 2016)
-* **Design UI** (current step)
+* **Design UI** (current step, ETA Sunday Mar 20 2016)
 
 ### How to view
 
