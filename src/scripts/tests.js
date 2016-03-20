@@ -9,7 +9,7 @@ require.config({
   // paths: maps ids with paths (no extension)
   paths: {
     'app': 'app',
-    'spec': 'tests',
+    'test': 'tests',
     'jasmine': 'libs/test/jasmine',
     'jasmine-html': 'libs/test/jasmine-html',
     'jasmine-boot': 'libs/test/boot'
@@ -26,7 +26,7 @@ require.config({
 });
 
 require(['jasmine-boot'], function () {
-  require(['spec/testspec'], function () {
+  require(['test/testspec'], function () {
     //trigger Jasmine
     window.onload();
   });
