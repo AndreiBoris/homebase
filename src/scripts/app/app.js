@@ -8,7 +8,7 @@ require(['jquery'],
          */
         var $navProjects = $('#navbar__projects'),
             $navProjectsDrop = $('#navbar__projects__dropdown'),
-            $navProjectsDropLinks = $('.navbar__projects__dropdown__link'),
+            $navProjectsDropLinks = $('.navbar__projects__dropdown__title'),
             $body = $('body'),
             $navBar = $('#navigation'),
             $backToTop = $('#back-to-top'),
@@ -26,6 +26,7 @@ require(['jquery'],
          */
         $navProjectsDropLinks.on('click', function() {
             $navProjectsDrop.removeClass('--show');
+            console.log('clicked a link!');
         });
 
         /**
