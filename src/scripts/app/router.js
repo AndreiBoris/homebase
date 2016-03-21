@@ -6,8 +6,9 @@ define(['backbone'], function(Backbone) {
     var Router = Backbone.Router.extend({
         routes: {
             '': 'home',
-            'projects': 'projects',
-            'blog/:id': 'blog'
+            'portfolio': 'portfolio',
+            'blog': 'blog',
+            'blog/:id': 'blogPost'
         }
     });
 

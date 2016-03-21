@@ -4,13 +4,13 @@ define(['jquery', 'underscore', 'backbone'],
     function($, _, Backbone) {
         'use strict';
 
-        var HomeView = Backbone.View.extend({
+        var BlogView = Backbone.View.extend({
             // All actions for rendering the view should happen in this element
             // View should never outreach this element. May want to split up children
             // of this View into other Views.
             el: '.main',
             render: function() {
-                this.$el.html('This is the home view, we are looking at it.');
+                this.$el.html('This is the blog view, we are looking at it.');
                 // var users = new UserCollection();
                 // var self = this;
                 // users.fetch({
@@ -27,5 +27,5 @@ define(['jquery', 'underscore', 'backbone'],
             }
         });
 
-        return HomeView;
+        return BlogView;
     });
