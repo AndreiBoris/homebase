@@ -30,8 +30,9 @@ branch. It is a bare, Skeleton-based website. Best feature: it loads fast.
 #### Next Steps:
 
 * Incorporate requireJS and Backbone scaffolding. Remove gh-pages hosting to
-allow for cleaner directory structure. (Fri Mar 18 2016)
-* **Design UI** (current step, ETA Sunday Mar 20 2016)
+allow for cleaner directory structure. (DONE Fri Mar 18 2016)
+* Design UI (DONE Mar 20 2016)
+* **Create appropriate Models and Collections** (ETA Mon Mar 21 2016)
 
 ### How to view
 
