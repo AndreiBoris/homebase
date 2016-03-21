@@ -7,3 +7,13 @@ npm-debug.log
 *.swp
 src/components
 plan.txt
+
+dist/scripts/launch.js
+dist/scripts/launch.min.js
+dist/scripts/tests
+dist/scripts/app
+dist/styles
+dist/index.html
+dist/stuff.html
+dist/SpecRunner.html
+src/stuff.html
