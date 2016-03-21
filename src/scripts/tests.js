@@ -10,6 +10,7 @@ require.config({
   paths: {
     'app': 'app',
     'test': 'tests',
+    'jquery': 'libs/jquery.min',
     'jasmine': 'libs/test/jasmine',
     'jasmine-html': 'libs/test/jasmine-html',
     'jasmine-boot': 'libs/test/boot'
@@ -26,7 +27,7 @@ require.config({
 });
 
 require(['jasmine-boot'], function () {
-  require(['test/testspec'], function () {
+  require(['test/testrouter'], function () {
     //trigger Jasmine
     window.onload();
   });

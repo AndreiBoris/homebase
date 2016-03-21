@@ -79,7 +79,7 @@ gulp.task('images', function() {
 // the build phase anyway.
 gulp.task('clean', function() {
     return del(['dist/styles', 'dist/scripts/**/*', '!dist/scripts/{libs,libs/**/*}',
-        'dist/index.html']);
+        'dist/index.html', '!dist/SpecRunner.html']);
 });
 
 // Minify HTML
