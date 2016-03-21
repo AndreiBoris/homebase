@@ -1,6 +1,6 @@
 /* global define */
 
-define(['underscore', 'backbone'], function(_, Backbone) {
+define(['backbone'], function(Backbone) {
     'use strict';
     // Create a router that manages which view to load depending on the URL
     var Router = Backbone.Router.extend({

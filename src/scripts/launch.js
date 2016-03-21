@@ -14,6 +14,7 @@
         },
     });
 
+    // Run main script
     requirejs(['app/app.min']);
 
     /**
