@@ -35,7 +35,7 @@ allow for cleaner directory structure. (DONE Fri Mar 18 2016)
 * Currently in a big detour learning about working with servers and SQL...
 likely will be changing the plan to create a smaller-shorter term project using
 SQL and Backbone and then coming back to this project to work on some other
-technologies.
+technologies. (2016-03-30 09:092016-03-30 09:09)
 
 ### How to view
 
