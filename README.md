@@ -32,7 +32,10 @@ branch. It is a bare, Skeleton-based website. Best feature: it loads fast.
 * Incorporate requireJS and Backbone scaffolding. Remove gh-pages hosting to
 allow for cleaner directory structure. (DONE Fri Mar 18 2016)
 * Design UI (DONE Mar 20 2016)
-* **Create appropriate Models and Collections** (ETA Mon Mar 21 2016)
+* Currently in a big detour learning about working with servers and SQL...
+likely will be changing the plan to create a smaller-shorter term project using
+SQL and Backbone and then coming back to this project to work on some other
+technologies.
 
 ### How to view
 
