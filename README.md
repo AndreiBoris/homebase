@@ -14,15 +14,19 @@ Will be transferred to an appropriate hosting service soon.
 
 Here I will post the current state of this project.
 
-ETA for generally complete project: **End of April 2016**
+ETA for generally complete project: **End of May 2016**
 
 #### Planned Features
 
-* A blog with comments enabled
-* Backbone single page application
-* Communicate with backend server that stores a database of blog entries
-* Solid Jasmine testing suite
-* Components broken up into requireJS modules
+**UPDATE on April 23rd 2016: spent a lot of my time learning about data
+structures and backend things instead of working on this in an effort to make
+this project as best as it could be. This means that I won't get to it until
+a bit later, however, as there is plenty to wrap my head around. The plan is to
+scrap most of the goals from before and focus on a few things:**
+
+* React for the frontend
+* Express on the backend
+* Postgres if necessary as the database (wrestling with postgres on Node now)
 
 Current: The old version of this website is currently available on the master
 branch. It is a bare, Skeleton-based website. Best feature: it loads fast.
@@ -42,7 +46,7 @@ technologies. (2016-03-30 09:092016-03-30 09:09)
 In your favourite command line, clone the respository:
 
 ```
-git clone https://github.com/AndreiCommunication/homebase.git repository
+git clone https://github.com/AndreiBoris/homebase.git repository
 ```
 
 Enter the repository
@@ -95,4 +99,4 @@ The exception being Skeleton-Sass which didn't provide a copied version of the
 license but [a link to the online version.](http://opensource.org/licenses/mit-license.php)
 
 My website is licensed under the
-[Creative Commons Attribution 4.0 International Public License.](https://github.com/AndreiCommunication/homebase/blob/master/LICENSE)
+[Creative Commons Attribution 4.0 International Public License.](https://github.com/AndreiBoris/homebase/blob/master/LICENSE)
